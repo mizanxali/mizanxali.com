@@ -1,313 +1,912 @@
 ---
+import "../styles/global.css";
+
+const huddle01Projects = [
+  {
+    name: "Network Dashboard",
+    description: "Private dashboard for node operators",
+    image: "/network-dashboard.png",
+    links: [{ label: "Dashboard", url: "https://dashboard.huddle01.network" }],
+    tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Wagmi", "tRPC"],
+  },
+  {
+    name: "Testnet",
+    description: "Public testnet platform",
+    image: "/testnet.png",
+    links: [{ label: "Live Site", url: "https://testnet.huddle01.network" }],
+    tech: ["Next.js", "Tailwind CSS", "Solidity", "PostgreSQL", "tRPC", "Wagmi"],
+  },
+  {
+    name: "Huddle01 Meet",
+    description: "Video conferencing web app",
+    image: "/meet-app.jpeg",
+    links: [{ label: "Live Site", url: "https://hudl.new" }],
+    tech: ["Next.js", "Tailwind CSS", "WebRTC", "Node.js", "Websockets", "mediasoup", "gRPC"],
+  },
+  {
+    name: "House",
+    description:
+      "Audio spaces, livestreaming, and creator tokens app for the Farcaster and Base ecosystem",
+    image: "/house.png",
+    links: [{ label: "Live Site", url: "https://house01.fun" }],
+    tech: ["Next.js", "Tailwind CSS", "Farcaster", "LiveKit", "Mux", "PostgreSQL", "tRPC"],
+  },
+  {
+    name: "Huddlepad",
+    description:
+      "ICO platform using Uniswap's CCA mechanism for token distribution",
+    image: "/ico.png",
+    links: [{ label: "Launch App", url: "https://hudl-ico.huddlepad.xyz/hudl-ico" }],
+    tech: ["Next.js", "Tailwind CSS", "Uniswap", "Ethereum", "Wagmi", "GraphQL"],
+  },
+  {
+    name: "Meet Dashboard",
+    description: "All-in-one suite of meetings and developer tools",
+    image: "/meet-dashboard.png",
+    links: [{ label: "Platform", url: "https://huddle01.app" }],
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "GraphQL", "PostgreSQL", "Hono", "Stripe"],
+  },
+  {
+    name: "Node Mint",
+    description: "Website to purchase media nodes",
+    image: "/node.huddle01.com_.png",
+    links: [{ label: "Live Site", url: "https://node.huddle01.com" }],
+    tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "tRPC", "CopperX"],
+  },
+  {
+    name: "SDK & Docs",
+    description:
+      "Suite of cross-platform webRTC SDKs and documentation for developers",
+    image: "/docs.png",
+    links: [{ label: "Docs", url: "https://docs.huddle01.network" }],
+    tech: ["Next.js", "Tailwind CSS", "WebRTC", "Node.js"],
+  },
+];
+
+const personalProjects = [
+  {
+    name: "mpp-webrtc",
+    description:
+      "AI agents that pay per-second to watch live video feeds through machine payments protocol over webRTC",
+    image: "/mpp-webrtc.png",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/mpp-webrtc" }],
+    tech: ["Tempo", "MPP", "WebRTC", "Node.js"],
+  },
+  {
+    name: "Pinitia",
+    description:
+      "Prediction markets where users bet on ratings, reviews, and live visitor activity of places on Google Maps",
+    image: "/pinitia.png",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/pinitia" }],
+    tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Google Maps", "Solidity", "Initia"],
+  },
+  {
+    name: "Visage",
+    description:
+      "Desktop app for finding photos of yourself from a large album using face recognition ML — fully offline",
+    image: "/visage.png",
+    links: [{ label: "Live Site", url: "https://visage-2tr.pages.dev" }],
+    tech: ["Electron", "Node.js", "RetinaFace", "ONNX", "Zustand", "SQLite"],
+  },
+  {
+    name: "arbchain.dev",
+    description:
+      "Arbitrum chain configurator that generates deployment scripts and a post-deployment onchain verifier",
+    image: "/arbchain.png",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/arbchain.dev" }],
+    tech: ["Next.js", "Tailwind CSS", "Wagmi", "Arbitrum"],
+  },
+  {
+    name: "flank.bet",
+    description: "Esports crypto micro-betting platform",
+    image: "/flank.bet.png",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/flank.bet" },
+      { label: "Devpost", url: "https://devpost.com/software/flank-bet" },
+    ],
+    tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Solidity"],
+  },
+  {
+    name: "Finesse",
+    description:
+      "DeFi ecosystem for fans to get exclusive access to their favorite music artists by trading song tokens",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/finesse" },
+      { label: "Devfolio", url: "https://devfolio.co/projects/finesse-6b18" },
+    ],
+    tech: ["Next.js", "Tailwind CSS", "Solidity", "Firebase", "Wagmi", "Polygon"],
+  },
+  {
+    name: "Pit Stop",
+    description:
+      "Web3 Formula1 fantasy game — mint F1 cars as NFTs and compete by wagering them on real life races",
+    image: "/pitstop.png",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/pit-stop" },
+      { label: "Devfolio", url: "https://devfolio.co/projects/pit-stop-a06f" },
+    ],
+    tech: ["Next.js", "Tailwind CSS", "Solidity", "Firebase", "Wagmi", "Polygon"],
+  },
+  {
+    name: "Ariadne",
+    description:
+      "AI tool to download YouTube videos, extract segments of a specific speaker, and compile them into one file",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/ariadne" }],
+    tech: ["Node.js", "AssemblyAI", "FFmpeg"],
+  },
+  {
+    name: "Triarchy",
+    description: "Real-time 1v1 on-chain card battle game",
+    image: "/triarchy.png",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/triarchy" }],
+    tech: ["Next.js", "Tailwind CSS", "Solidity", "Partykit", "Wagmi"],
+  },
+  {
+    name: "UNO Online",
+    description: "Real-time 1v1 UNO card game",
+    image: "/uno.png",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/uno-online" },
+      { label: "YouTube", url: "https://www.youtube.com/watch?v=FBAJdbpFnjs" },
+    ],
+    tech: ["React", "Node.js", "Socket.IO"],
+  },
+];
+
+const videos = [
+  {
+    name: "Huddle01 Video Library",
+    url: "https://www.youtube.com/playlist?list=PLegd1MLQ2KqEhjeGbFfDJSTN6FogFRFgc",
+    description: "Playlist of video content created for Huddle01",
+    placeholder: "playlist",
+  },
+  {
+    name: "ETHIndia 2023 Workshop",
+    url: "https://www.youtube.com/watch?v=1buGBl2UQNI",
+    description: "IRL workshop at ETHGlobal's ETHIndia 2023",
+    embedUrl: "https://www.youtube.com/embed/1buGBl2UQNI",
+  },
+  {
+    name: "ETHGlobal Tokyo 2023",
+    url: "https://www.youtube.com/watch?v=iBej0ze9iB0&t=360s",
+    description: "Virtual workshop for ETHGlobal Tokyo 2023",
+    embedUrl: "https://www.youtube.com/embed/iBej0ze9iB0",
+  },
+  {
+    name: "UNO Online Tutorial",
+    url: "https://www.youtube.com/watch?v=FBAJdbpFnjs",
+    description: "Tutorial on building a realtime UNO card game",
+    embedUrl: "https://www.youtube.com/embed/FBAJdbpFnjs",
+  },
+];
+
+const skills = [
+  "TypeScript",
+  "React",
+  "Next.js",
+  "React Native",
+  "Node.js",
+  "WebRTC",
+  "Solidity",
+  "Ethers.js",
+  "Wagmi",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "GraphQL",
+  "Docker",
+  "AWS",
+];
+
+const techMeta = {
+  "TypeScript": { slug: "typescript" },
+  React: { slug: "react" },
+  "Next.js": { slug: "nextdotjs", color: "white" },
+  "Tailwind CSS": { slug: "tailwindcss" },
+  "Node.js": { slug: "nodedotjs" },
+  "React Native": { slug: "react" },
+  Solidity: { slug: "solidity", color: "white" },
+  PostgreSQL: { slug: "postgresql" },
+  GraphQL: { slug: "graphql" },
+  Wagmi: { fallback: "Wg" },
+  Stripe: { slug: "stripe", fallback: "St" },
+  Firebase: { slug: "firebase", fallback: "Fb" },
+  Polygon: { slug: "polygon", fallback: "Po" },
+  SQLite: { slug: "sqlite", fallback: "Sq" },
+  ONNX: { slug: "onnx", fallback: "Ox" },
+  tRPC: { slug: "trpc", fallback: "tR" },
+  Hono: { slug: "hono", fallback: "Ho" },
+  Zustand: { fallback: "Zu" },
+  Partykit: { fallback: "Pk" },
+  RetinaFace: { fallback: "Rf" },
+  OpenAI: { slug: "openai", color: "white" },
+  Electron: { slug: "electron" },
+  OpenCV: { slug: "opencv" },
+  Arbitrum: { slug: "arbitrum" },
+  Python: { slug: "python" },
+  FFmpeg: { slug: "ffmpeg" },
+  YouTube: { slug: "youtube" },
+  "Socket.IO": { slug: "socketdotio", color: "white" },
+  Android: { slug: "android" },
+  Farcaster: { slug: "farcaster" },
+  Base: { slug: "base" },
+  Uniswap: { slug: "uniswap" },
+  Ethereum: { slug: "ethereum" },
+  "Google Maps": { slug: "googlemaps" },
+  WebRTC: { custom: "webrtc" },
+};
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>mizanxali</title>
-    <meta name="description" content="About Me" />
+    <title>Mizan Ali</title>
+    <meta
+      name="description"
+      content="Fullstack product engineer building at the intersection of complex frontend engineering and onchain realtime systems."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <h1>Mizan Ali</h1>
+  <body
+    class="bg-neutral-950 text-neutral-50 font-geist antialiased selection:bg-white/20 lg:overflow-hidden"
+  >
+    <div class="min-h-screen lg:h-screen">
+      <div class="lg:grid lg:h-screen lg:grid-cols-2">
+        <aside class="border-b border-white/8 px-6 py-8 lg:flex lg:min-h-screen lg:flex-col lg:justify-between lg:border-b-0 lg:border-r lg:px-10 lg:py-10">
+          <div>
+            <section class="animate-fade-in pt-8 lg:flex lg:min-h-[calc(100vh-14rem)] lg:flex-col lg:justify-center lg:pt-0">
+              <h1 class="mt-4 text-5xl font-bold tracking-tight leading-none md:text-7xl">
+                Mizan Ali<span class="inline-block w-[3px] h-[0.85em] bg-neutral-50 ml-1 align-middle animate-blink"></span>
+              </h1>
+              <p
+                class="mt-6 max-w-xl text-base leading-relaxed text-neutral-400 font-light md:text-lg"
+              >
+                I am a fullstack product engineer, with a strong frontend focus.
+                Over the last 4 years, I have worked at the intersection of
+                complex frontend engineering and onchain realtime systems, most
+                recently as a Lead Product Engineer at Huddle01. I love building
+                consumer-facing apps in the web3 space.
+              </p>
+              <p class="mt-3 text-sm text-neutral-500 font-light">
+                Abu Dhabi, UAE
+              </p>
+              <div class="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="border border-white/10 px-5 py-2.5 text-sm font-medium text-neutral-300 transition-all duration-300 hover:border-white/20 hover:text-neutral-50"
+                  >Resume</a
+                >
+              </div>
+            </section>
+          </div>
 
-    <section>
-      <p>
-        I am a fullstack product engineer, with a strong frontend focus. Over
-        the last 4 years, I have worked at the intersection of complex frontend
-        engineering and onchain realtime systems, most recently as a Lead Product
-        Engineer at Huddle01, working on web3 and webRTC tech stacks using
-        typescript. I love building consumer-facing apps in the web3 space.
-      </p>
-    </section>
+          <div class="mt-10 border-t border-white/8 pt-6 lg:mt-8">
+            <div class="mt-4 flex flex-wrap gap-4">
+              {
+                [
+                  {
+                    label: "Twitter",
+                    url: "https://twitter.com/mizanxali",
+                  },
+                  {
+                    label: "GitHub",
+                    url: "https://github.com/mizanxali",
+                  },
+                  {
+                    label: "LinkedIn",
+                    url: "https://linkedin.com/in/mizanxali",
+                  },
+                  {
+                    label: "Telegram",
+                    url: "https://t.me/mizanxali",
+                  },
+                ].map((link) => (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-neutral-400 transition-colors duration-300 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </aside>
 
-    <section>
-      <p>📍 Abu Dhabi, UAE</p>
-    </section>
+        <main
+          id="content-pane"
+          class="px-6 py-8 lg:h-screen lg:overflow-y-auto lg:px-10 lg:py-10"
+        >
+          <section id="work" class="scroll-mt-24">
+            <div class="max-w-4xl">
+              <div class="scroll-animate">
+                <div>
+                  <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
+                    Things shipped at Huddle01
+                  </h3>
+                  <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
+                    Lead Product Engineer, Jan 2023 - Mar 2026. Built core products across web3 and webRTC tech stacks using TypeScript.
+                  </p>
+                </div>
 
-    <section>
-      <a
-        href="https://twitter.com/mizanxali"
-        target="_blank"
-        rel="noopener noreferrer">Twitter</a
-      >
-      |
-      <a
-        href="https://github.com/mizanxali"
-        target="_blank"
-        rel="noopener noreferrer">Github</a
-      >
-      |
-      <a
-        href="https://linkedin.com/in/mizanxali"
-        target="_blank"
-        rel="noopener noreferrer">LinkedIn</a
-      >
-      |
-      <a
-        href="https://t.me/mizanxali"
-        target="_blank"
-        rel="noopener noreferrer">Telegram</a
-      >
-      |
-      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-    </section>
+                <div class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
+                  {
+                    huddle01Projects.map((project, i) => (
+                      <article
+                        class="group scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80 transition-all duration-500 hover:border-white/16 hover:bg-neutral-900/80"
+                        style={`transition-delay: ${i * 50}ms`}
+                      >
+                        <div class="relative aspect-[16/9] overflow-hidden border-b border-white/8 bg-neutral-900">
+                          {project.image ? (
+                            <img
+                              src={project.image}
+                              alt={project.name}
+                              loading="lazy"
+                              class="absolute inset-0 h-full w-full object-cover object-top opacity-80 transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                            />
+                          ) : (
+                            <div class="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,#101010_0%,#171717_50%,#0a0a0a_100%)]">
+                              <div class="flex items-center gap-4">
+                                <div class="border border-white/12 p-3">
+                                  <svg
+                                    class="h-7 w-7 text-neutral-200"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    aria-hidden="true"
+                                  >
+                                    <rect x="4.5" y="4.5" width="15" height="15"></rect>
+                                    <path d="M8 9.5h8"></path>
+                                    <path d="M8 13h8"></path>
+                                    <path d="M8 16.5h4.5"></path>
+                                  </svg>
+                                </div>
+                                <div class="border border-white/12 p-3">
+                                  <svg
+                                    class="h-7 w-7 text-neutral-400"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    aria-hidden="true"
+                                  >
+                                    <path d="M6 7.5h12"></path>
+                                    <path d="M6 12h12"></path>
+                                    <path d="M6 16.5h7"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                        <div class="p-5">
+                          <div class="flex items-center justify-between gap-4">
+                            <h4 class="text-base font-semibold text-neutral-100 transition-colors group-hover:text-white">
+                              {project.name}
+                            </h4>
+                            <svg
+                              class="h-3.5 w-3.5 shrink-0 text-neutral-600 transition-colors group-hover:text-neutral-300"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M7 17L17 7M17 7H7M17 7v10"
+                              />
+                            </svg>
+                          </div>
+                          <p class="mt-2 text-sm leading-relaxed text-neutral-500 transition-colors group-hover:text-neutral-400">
+                            {project.description}
+                          </p>
+                          <div class="mt-5 border-t border-white/8 pt-4">
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                              Links
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                              {
+                                project.links.map((link) => (
+                                  <a
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300 transition-all duration-300 hover:border-white/20 hover:bg-white/4 hover:text-white"
+                                  >
+                                    <span>{link.label}</span>
+                                    <svg
+                                      class="h-3 w-3 text-neutral-500 transition-colors group-hover:text-neutral-300"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M7 17L17 7M17 7H7M17 7v10"
+                                      />
+                                    </svg>
+                                  </a>
+                                ))
+                              }
+                            </div>
+                          </div>
+                          <div class="mt-4 border-t border-white/8 pt-4">
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                              Stack
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                              {
+                                project.tech.map((tech) => {
+                                  const meta = techMeta[tech] ?? null;
+                                  return (
+                                    <span class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300">
+                                      {meta?.custom === "webrtc" ? (
+                                        <svg
+                                          class="h-3.5 w-3.5 text-neutral-300"
+                                          viewBox="0 0 24 24"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="1.8"
+                                          aria-hidden="true"
+                                        >
+                                          <circle cx="12" cy="12" r="2.25"></circle>
+                                          <path d="M5.5 8.5a9 9 0 0 1 0 7"></path>
+                                          <path d="M18.5 8.5a9 9 0 0 0 0 7"></path>
+                                          <path d="M8.5 10.25a4.8 4.8 0 0 1 0 3.5"></path>
+                                          <path d="M15.5 10.25a4.8 4.8 0 0 0 0 3.5"></path>
+                                        </svg>
+                                      ) : meta?.slug ? (
+                                        <>
+                                          <img
+                                            src={meta.color
+                                              ? `https://cdn.simpleicons.org/${meta.slug}/${meta.color}`
+                                              : `https://cdn.simpleicons.org/${meta.slug}`}
+                                            alt=""
+                                            loading="lazy"
+                                            class="h-3.5 w-3.5 opacity-90"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                          />
+                                          <span
+                                            class="hidden h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400"
+                                          >
+                                            {meta.fallback ?? tech.slice(0, 2)}
+                                          </span>
+                                        </>
+                                      ) : meta?.fallback ? (
+                                        <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400">
+                                          {meta.fallback}
+                                        </span>
+                                      ) : (
+                                        <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[8px] uppercase text-neutral-400">
+                                          {tech.slice(0, 1)}
+                                        </span>
+                                      )}
+                                      <span>{tech}</span>
+                                    </span>
+                                  );
+                                })
+                              }
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    ))
+                  }
+                </div>
+              </div>
 
-    <section>
-      <h2>Things I built and shipped at Huddle01 from Jan 2023 to Mar 2026</h2>
-      <ul>
-        <li>
-          <a
-            href="https://dashboard.huddle01.network"
-            target="_blank"
-            rel="noopener noreferrer">Network Dashboard</a
-          > - Huddle01's private dashboard for node operators
-        </li>
-        <li>
-          <a
-            href="https://testnet.huddle01.network"
-            target="_blank"
-            rel="noopener noreferrer">Testnet</a
-          > - Huddle01's public testnet platform
-        </li>
-        <li>
-          <a
-            href="https://house01.fun"
-            target="_blank"
-            rel="noopener noreferrer">House</a
-          > - Audio spaces, livestreaming, and creator tokens app for the Farcaster
-          and Base ecosystem
-        </li>
-        <li>
-          <a
-            href="https://hudl-ico.huddlepad.xyz/hudl-ico"
-            target="_blank"
-            rel="noopener noreferrer">Huddlepad</a
-          > - Huddle01's ICO platform using Uniswap's CCA mechanism for token distribution
-        </li>
-        <li>
-          <a
-            href="https://apps.apple.com/us/app/huddle01-video-meetings-app/id1620195193"
-            target="_blank"
-            rel="noopener noreferrer">iOS</a
-          >
-          |
-          <a
-            href="https://play.google.com/store/apps/details?id=com.app.huddle01&hl=en_IN"
-            target="_blank"
-            rel="noopener noreferrer">Android</a
-          > - Huddle01's video conferencing mobile app
-        </li>
-        <li>
-          <a
-            href="https://huddle01.app"
-            target="_blank"
-            rel="noopener noreferrer">Meet Dashboard</a
-          > - Huddle01's all-in-one suite of meetings and developer tools
-        </li>
-        <li>
-          <a
-            href="https://node.huddle01.com"
-            target="_blank"
-            rel="noopener noreferrer">Node Mint</a
-          > - Huddle01's website to purchase media nodes
-        </li>
-        <li>
-          <a href="https://hudl.new" target="_blank" rel="noopener noreferrer"
-            >Huddle01 Meet</a
-          > - Huddle01's video conferencing web app
-        </li>
-        <li>
-          <a
-            href="https://www.npmjs.com/package/@huddle01/react"
-            target="_blank"
-            rel="noopener noreferrer">SDK</a
-          >
-          |
-          <a
-            href="https://docs.huddle01.network"
-            target="_blank"
-            rel="noopener noreferrer">Documentation</a
-          > - Suite of cross-platform webRTC SDKs and documentation for developers
-        </li>
-      </ul>
-    </section>
+              <section class="mt-16">
+                <div class="scroll-animate">
+                  <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
+                    Side Projects
+                  </h3>
+                  <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
+                    Experiments across AI, developer tooling, prediction markets, desktop software, and games.
+                  </p>
+                </div>
 
-    <section>
-      <h2>Other stuff I've built that I'm proud of</h2>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/mizanxali/mpp-webrtc"
-            target="_blank"
-            rel="noopener noreferrer">mpp-webrtc</a
-          > - AI agents that pay per-second to watch live video feeds through machine
-          payments protocol (MPP) over webRTC
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/pinitia"
-            target="_blank"
-            rel="noopener noreferrer">Pinitia</a
-          > - Prediction markets platform where users bet ratings, reviews, and live
-          visitor activity of places on Google Maps
-        </li>
-        <li>
-          <a
-            href="https://visage-2tr.pages.dev"
-            target="_blank"
-            rel="noopener noreferrer">Visage</a
-          > - Desktop app for finding photos of yourself from a large album using face
-          recognition ML - offline, without uploading anything to the cloud
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/arbchain.dev"
-            target="_blank"
-            rel="noopener noreferrer">arbchain.dev</a
-          > - Arbitrum chain configurator that generates deployment scripts using Arbitrum
-          Chain SDK and a post-deployment onchain verifier
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/flank.bet"
-            target="_blank"
-            rel="noopener noreferrer">flank.bet</a
-          > |
-          <a
-            href="https://devpost.com/software/flank-bet"
-            target="_blank"
-            rel="noopener noreferrer">Devpost</a
-          > - Esports crypto micro-betting platform
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/finesse"
-            target="_blank"
-            rel="noopener noreferrer">Finesse</a
-          > |
-          <a
-            href="https://devfolio.co/projects/finesse-6b18"
-            target="_blank"
-            rel="noopener noreferrer">Devfolio</a
-          > - DeFi ecosystem for fans to get exclusive access to their favorite music
-          artists by trading song tokens
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/pit-stop"
-            target="_blank"
-            rel="noopener noreferrer">Pit Stop</a
-          > |
-          <a
-            href="https://devfolio.co/projects/pit-stop-a06f"
-            target="_blank"
-            rel="noopener noreferrer">Devfolio</a
-          > - web3 Formula1 fantasy game platform to mint F1 cars as NFTs and compete
-          with others by wagering them on real life F1 races
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/ariadne"
-            target="_blank"
-            rel="noopener noreferrer">Ariadne</a
-          > - AI tool to download YouTube videos using URLs, extract segments where a
-          specific speaker is talking, and compile them into a single local video file
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/triarchy"
-            target="_blank"
-            rel="noopener noreferrer">Triarchy</a
-          > - Real-time 1v1 on-chain card battle game
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/uno-online"
-            target="_blank"
-            rel="noopener noreferrer">UNO Online</a
-          > |
-          <a
-            href="https://www.youtube.com/watch?v=FBAJdbpFnjs0"
-            target="_blank"
-            rel="noopener noreferrer">Youtube</a
-          > - Real-time 1v1 UNO card game
-        </li>
-        <li>
-          <a
-            href="https://github.com/mizanxali/daenerys"
-            target="_blank"
-            rel="noopener noreferrer">Daenerys</a
-          > - VoIP phone calling mobile app
-        </li>
-      </ul>
-      <p>
-        + a lot more on my <a
-          href="https://github.com/mizanxali"
-          target="_blank"
-          rel="noopener noreferrer">GitHub</a
-        >.
-      </p>
-    </section>
+                <div class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
+                  {
+                    personalProjects.map((project, i) => (
+                      <article
+                        class="group scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80 transition-all duration-500 hover:border-white/16 hover:bg-neutral-900/80"
+                        style={`transition-delay: ${i * 50}ms`}
+                      >
+                        <div class="relative aspect-[16/9] overflow-hidden border-b border-white/8 bg-neutral-900">
+                          {project.image ? (
+                            <img
+                              src={project.image}
+                              alt={project.name}
+                              loading="lazy"
+                              class="absolute inset-0 h-full w-full object-cover object-top opacity-80 transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                            />
+                          ) : (
+                            <div class="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,#101010_0%,#171717_50%,#0a0a0a_100%)]">
+                              <div class="flex items-center gap-4">
+                                <div class="border border-white/12 p-3">
+                                  <svg
+                                    class="h-7 w-7 text-neutral-200"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    aria-hidden="true"
+                                  >
+                                    <rect x="4.5" y="4.5" width="15" height="15"></rect>
+                                    <path d="M8 9.5h8"></path>
+                                    <path d="M8 13h8"></path>
+                                    <path d="M8 16.5h4.5"></path>
+                                  </svg>
+                                </div>
+                                <div class="border border-white/12 p-3">
+                                  <svg
+                                    class="h-7 w-7 text-neutral-400"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    aria-hidden="true"
+                                  >
+                                    <path d="M6 7.5h12"></path>
+                                    <path d="M6 12h12"></path>
+                                    <path d="M6 16.5h7"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                        <div class="p-5">
+                          <div class="flex items-center justify-between gap-4">
+                            <h4 class="text-base font-semibold text-neutral-100 transition-colors group-hover:text-white">
+                              {project.name}
+                            </h4>
+                            <svg
+                              class="h-3.5 w-3.5 shrink-0 text-neutral-600 transition-colors group-hover:text-neutral-300"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M7 17L17 7M17 7H7M17 7v10"
+                              />
+                            </svg>
+                          </div>
+                          <p class="mt-2 text-sm leading-relaxed text-neutral-500 transition-colors group-hover:text-neutral-400">
+                            {project.description}
+                          </p>
+                          <div class="mt-5 border-t border-white/8 pt-4">
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                              Links
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                              {
+                                project.links.map((link) => (
+                                  <a
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300 transition-all duration-300 hover:border-white/20 hover:bg-white/4 hover:text-white"
+                                  >
+                                    <span>{link.label}</span>
+                                    <svg
+                                      class="h-3 w-3 text-neutral-500 transition-colors group-hover:text-neutral-300"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M7 17L17 7M17 7H7M17 7v10"
+                                      />
+                                    </svg>
+                                  </a>
+                                ))
+                              }
+                            </div>
+                          </div>
+                          <div class="mt-4 border-t border-white/8 pt-4">
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                              Stack
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                              {
+                                project.tech.map((tech) => {
+                                  const meta = techMeta[tech] ?? null;
+                                  return (
+                                    <span class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300">
+                                      {meta?.custom === "webrtc" ? (
+                                        <svg
+                                          class="h-3.5 w-3.5 text-neutral-300"
+                                          viewBox="0 0 24 24"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-width="1.8"
+                                          aria-hidden="true"
+                                        >
+                                          <circle cx="12" cy="12" r="2.25"></circle>
+                                          <path d="M5.5 8.5a9 9 0 0 1 0 7"></path>
+                                          <path d="M18.5 8.5a9 9 0 0 0 0 7"></path>
+                                          <path d="M8.5 10.25a4.8 4.8 0 0 1 0 3.5"></path>
+                                          <path d="M15.5 10.25a4.8 4.8 0 0 0 0 3.5"></path>
+                                        </svg>
+                                      ) : meta?.slug ? (
+                                        <>
+                                          <img
+                                            src={meta.color
+                                              ? `https://cdn.simpleicons.org/${meta.slug}/${meta.color}`
+                                              : `https://cdn.simpleicons.org/${meta.slug}`}
+                                            alt=""
+                                            loading="lazy"
+                                            class="h-3.5 w-3.5 opacity-90"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                          />
+                                          <span
+                                            class="hidden h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400"
+                                          >
+                                            {meta.fallback ?? tech.slice(0, 2)}
+                                          </span>
+                                        </>
+                                      ) : meta?.fallback ? (
+                                        <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400">
+                                          {meta.fallback}
+                                        </span>
+                                      ) : (
+                                        <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[8px] uppercase text-neutral-400">
+                                          {tech.slice(0, 1)}
+                                        </span>
+                                      )}
+                                      <span>{tech}</span>
+                                    </span>
+                                  );
+                                })
+                              }
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    ))
+                  }
+                </div>
 
-    <section>
-      <h2>My technical video content on the internet</h2>
-      <ul>
-        <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLegd1MLQ2KqEhjeGbFfDJSTN6FogFRFgc"
-            target="_blank"
-            rel="noopener noreferrer">Huddle01 Video Content Library</a
-          > - YouTube playlist of video content I've created for Huddle01
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=1buGBl2UQNI"
-            target="_blank"
-            rel="noopener noreferrer">ETHIndia 2023 Workshop</a
-          > - Recording of my IRL workshop at ETHGlobal's ETHIndia 2023
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=iBej0ze9iB0&t=360s"
-            target="_blank"
-            rel="noopener noreferrer">ETHGlobal Tokyo 2023 Workshop</a
-          > - Recording of my virtual workshop for ETHGlobal Tokyo 2023
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=FBAJdbpFnjs"
-            target="_blank"
-            rel="noopener noreferrer">UNO Online Tutorial</a
-          > - YouTube tutorial video I made on building a realtime UNO card game
-        </li>
-      </ul>
-    </section>
+                <p class="mt-5 text-sm font-light text-neutral-500 scroll-animate">
+                  + more on <a
+                    href="https://github.com/mizanxali"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-neutral-300 underline decoration-neutral-700 underline-offset-4 transition-all duration-300 hover:text-white hover:decoration-neutral-400"
+                    >GitHub</a
+                  >
+                </p>
+              </section>
+
+              <section class="mt-16">
+                <div class="scroll-animate">
+                  <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
+                    Talks & Videos
+                  </h3>
+                  <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
+                    Workshops, walkthroughs, and product-focused video content.
+                  </p>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
+                  {
+                    videos.map((video, i) => (
+                      <div
+                        class="scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80"
+                        style={`transition-delay: ${i * 50}ms`}
+                      >
+                        <div class="aspect-video border-b border-white/8">
+                          {video.placeholder === "playlist" ? (
+                            <a
+                              href={video.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,#111111_0%,#171717_45%,#0a0a0a_100%)] px-8 text-center transition-colors duration-300 hover:bg-neutral-900"
+                            >
+                              <div class="flex flex-col items-center">
+                                <div class="border border-white/12 p-5">
+                                  <svg
+                                    class="h-10 w-10 text-neutral-200"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    aria-hidden="true"
+                                  >
+                                    <rect x="4.5" y="5.5" width="15" height="3.5"></rect>
+                                    <rect x="4.5" y="10.25" width="15" height="3.5"></rect>
+                                    <rect x="4.5" y="15" width="15" height="3.5"></rect>
+                                    <path d="M10 7.25 13 9v-3.5L10 7.25Z" fill="currentColor" stroke="none"></path>
+                                    <path d="M10 12 13 13.75v-3.5L10 12Z" fill="currentColor" stroke="none"></path>
+                                    <path d="M10 16.75 13 18.5V15L10 16.75Z" fill="currentColor" stroke="none"></path>
+                                  </svg>
+                                </div>
+                                <p class="mt-5 text-[10px] font-semibold uppercase tracking-[0.24em] text-neutral-500">
+                                  Playlist
+                                </p>
+                                <p class="mt-2 text-sm text-neutral-300">
+                                  Open the full Huddle01 video library
+                                </p>
+                              </div>
+                            </a>
+                          ) : (
+                            <iframe
+                              src={video.embedUrl}
+                              title={video.name}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                              loading="lazy"
+                              class="h-full w-full"
+                            />
+                          )}
+                        </div>
+                        <div class="p-5">
+                          <h4 class="text-base font-semibold text-neutral-100">
+                            {video.name}
+                          </h4>
+                          <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+                            {video.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </section>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 3.5rem;
+        background: #0a0a0a;
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      @media (min-width: 1024px) {
+        html,
+        body {
+          height: 100%;
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .animate-blink {
+        animation: blink 1s step-end infinite;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out;
+      }
+
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease-out,
+          transform 0.6s ease-out;
+      }
+
+      .scroll-animate.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      #content-pane {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(250, 250, 250, 0.14) transparent;
+      }
+
+      #content-pane::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      #content-pane::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      #content-pane::-webkit-scrollbar-thumb {
+        border: 3px solid transparent;
+        background: rgba(250, 250, 250, 0.14);
+        background-clip: content-box;
+      }
+    </style>
+
+    <script>
+      const contentPane = document.querySelector("#content-pane");
+      const animatedElements = document.querySelectorAll(".scroll-animate");
+      const isDesktop = () => window.matchMedia("(min-width: 1024px)").matches;
+
+      const createObserver = () =>
+        new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+            root: isDesktop() ? contentPane : null,
+            rootMargin: "0px 0px -80px 0px",
+          }
+        );
+
+      let observer = createObserver();
+
+      const observeAnimatedElements = () => {
+        observer.disconnect();
+        observer = createObserver();
+        animatedElements.forEach((el) => {
+          observer.observe(el);
+        });
+      };
+
+      observeAnimatedElements();
+
+      window.addEventListener("resize", observeAnimatedElements);
+
+      document.querySelectorAll("[data-pane-link]").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const href = link.getAttribute("href");
+          if (!href?.startsWith("#")) return;
+          const target = document.querySelector(href);
+          if (!target) return;
+          if (isDesktop() && contentPane) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
-
-<style>
-  body {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.5;
-    color: #fff;
-    background-color: #212121;
-    padding: 16px 32px;
-  }
-  @media (max-width: 768px) {
-    body {
-      padding: 12px 16px;
-    }
-  }
-  a {
-    color: #e0bbd2;
-  }
-</style>
