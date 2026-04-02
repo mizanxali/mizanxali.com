@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-geist: "Geist", system-ui, -apple-system, sans-serif;
+  --color-neutral-950: #0a0a0a;
+  --color-neutral-900: #111111;
+  --color-neutral-800: #1a1a1a;
+  --color-neutral-700: #2a2a2a;
+  --color-neutral-600: #3a3a3a;
+  --color-neutral-500: #666666;
+  --color-neutral-400: #888888;
+  --color-neutral-300: #a0a0a0;
+  --color-neutral-200: #cccccc;
+  --color-neutral-100: #ededed;
+  --color-neutral-50: #fafafa;
+}
