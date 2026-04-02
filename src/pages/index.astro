@@ -4,29 +4,29 @@ import "../styles/global.css";
 const huddle01Projects = [
   {
     name: "Network Dashboard",
-    description: "Private dashboard for node operators",
+    description: "Private dashboard for Huddle01 node operators with onchain node management",
     image: "/network-dashboard.png",
-    links: [{ label: "Dashboard", url: "https://dashboard.huddle01.network" }],
+    links: [{ label: "Live Site", url: "https://dashboard.huddle01.network" }],
     tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Wagmi", "tRPC"],
   },
   {
     name: "Testnet",
-    description: "Public testnet platform",
+    description: "Huddle01's public testnet platform with quests and a leaderboard",
     image: "/testnet.png",
     links: [{ label: "Live Site", url: "https://testnet.huddle01.network" }],
     tech: ["Next.js", "Tailwind CSS", "Solidity", "PostgreSQL", "tRPC", "Wagmi"],
   },
   {
     name: "Huddle01 Meet",
-    description: "Video conferencing web app",
+    description: "Huddle01's flagship product, a full-fledged webRTC-based video conferencing app",
     image: "/meet-app.jpeg",
     links: [{ label: "Live Site", url: "https://hudl.new" }],
-    tech: ["Next.js", "Tailwind CSS", "WebRTC", "Node.js", "Websockets", "mediasoup", "gRPC"],
+    tech: ["Next.js", "Tailwind CSS", "WebRTC", "Node.js", "Websockets", "mediasoup", "gRPC", "Posthog"],
   },
   {
     name: "House",
     description:
-      "Audio spaces, livestreaming, and creator tokens app for the Farcaster and Base ecosystem",
+      "Base and Farcaster mini-app with audio spaces, livestreaming, and one-click token launches for creators",
     image: "/house.png",
     links: [{ label: "Live Site", url: "https://house01.fun" }],
     tech: ["Next.js", "Tailwind CSS", "Farcaster", "LiveKit", "Mux", "PostgreSQL", "tRPC"],
@@ -34,22 +34,22 @@ const huddle01Projects = [
   {
     name: "Huddlepad",
     description:
-      "ICO platform using Uniswap's CCA mechanism for token distribution",
+      "Huddle01's ICO platform using Uniswap's Continuous Clearing Auction (CCA) mechanism for token distribution",
     image: "/ico.png",
-    links: [{ label: "Launch App", url: "https://hudl-ico.huddlepad.xyz/hudl-ico" }],
+    links: [{ label: "Live Site", url: "https://hudl-ico.huddlepad.xyz/hudl-ico" }],
     tech: ["Next.js", "Tailwind CSS", "Uniswap", "Ethereum", "Wagmi", "GraphQL"],
   },
   {
     name: "Meet Dashboard",
-    description: "All-in-one suite of meetings and developer tools",
+    description: "All-in-one dashboard for Huddle01 Meet - meeting scheduler, call recordings, and subscription management",
     image: "/meet-dashboard.png",
-    links: [{ label: "Platform", url: "https://huddle01.app" }],
-    tech: ["Next.js", "Tailwind CSS", "Node.js", "GraphQL", "PostgreSQL", "Hono", "Stripe"],
+    links: [{ label: "Live Site", url: "https://huddle01.app" }],
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "GraphQL", "PostgreSQL", "Hono", "Stripe", "Posthog"],
   },
   {
     name: "Node Mint",
-    description: "Website to purchase media nodes",
-    image: "/node.huddle01.com_.png",
+    description: "Website to purchase Huddle01 nodes via CopperX payment gateway",
+    image: "/node-mint.png",
     links: [{ label: "Live Site", url: "https://node.huddle01.com" }],
     tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "tRPC", "CopperX"],
   },
@@ -58,7 +58,7 @@ const huddle01Projects = [
     description:
       "Suite of cross-platform webRTC SDKs and documentation for developers",
     image: "/docs.png",
-    links: [{ label: "Docs", url: "https://docs.huddle01.network" }],
+    links: [{ label: "Live Site", url: "https://docs.huddle01.network" }],
     tech: ["Next.js", "Tailwind CSS", "WebRTC", "Node.js"],
   },
 ];
@@ -67,7 +67,7 @@ const personalProjects = [
   {
     name: "mpp-webrtc",
     description:
-      "AI agents that pay per-second to watch live video feeds through machine payments protocol over webRTC",
+      "AI agents that pay per-second through Tempo's Machine Payments Protocol (MPP) to watch live video feeds over webRTC",
     image: "/mpp-webrtc.png",
     links: [{ label: "GitHub", url: "https://github.com/mizanxali/mpp-webrtc" }],
     tech: ["Tempo", "MPP", "WebRTC", "Node.js"],
@@ -75,7 +75,7 @@ const personalProjects = [
   {
     name: "Pinitia",
     description:
-      "Prediction markets where users bet on ratings, reviews, and live visitor activity of places on Google Maps",
+      "Prediction markets app where users bet on ratings, reviews, and live visitor activity of places on Google Maps",
     image: "/pinitia.png",
     links: [{ label: "GitHub", url: "https://github.com/mizanxali/pinitia" }],
     tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Google Maps", "Solidity", "Initia"],
@@ -83,7 +83,7 @@ const personalProjects = [
   {
     name: "Visage",
     description:
-      "Desktop app for finding photos of yourself from a large album using face recognition ML — fully offline",
+      "Desktop app for finding photos of yourself from a large album using face recognition ML, fully offline",
     image: "/visage.png",
     links: [{ label: "Live Site", url: "https://visage-2tr.pages.dev" }],
     tech: ["Electron", "Node.js", "RetinaFace", "ONNX", "Zustand", "SQLite"],
@@ -91,14 +91,14 @@ const personalProjects = [
   {
     name: "arbchain.dev",
     description:
-      "Arbitrum chain configurator that generates deployment scripts and a post-deployment onchain verifier",
+      "Arbitrum rollup configurator app that generates deployment scripts using their SDK and a post-deployment onchain verifier",
     image: "/arbchain.png",
     links: [{ label: "GitHub", url: "https://github.com/mizanxali/arbchain.dev" }],
     tech: ["Next.js", "Tailwind CSS", "Wagmi", "Arbitrum"],
   },
   {
     name: "flank.bet",
-    description: "Esports crypto micro-betting platform",
+    description: "Crypto micro-betting platform where users bet on live esports matches",
     image: "/flank.bet.png",
     links: [
       { label: "GitHub", url: "https://github.com/mizanxali/flank.bet" },
@@ -109,7 +109,8 @@ const personalProjects = [
   {
     name: "Finesse",
     description:
-      "DeFi ecosystem for fans to get exclusive access to their favorite music artists by trading song tokens",
+      "DeFi app for fans to get exclusive access to their favorite music artists by trading song tokens",
+    image: "/finesse.png",
     links: [
       { label: "GitHub", url: "https://github.com/mizanxali/finesse" },
       { label: "Devfolio", url: "https://devfolio.co/projects/finesse-6b18" },
@@ -130,7 +131,7 @@ const personalProjects = [
   {
     name: "Ariadne",
     description:
-      "AI tool to download YouTube videos, extract segments of a specific speaker, and compile them into one file",
+      "Node.js AI service to download YouTube videos, extract segments of a specific speaker, and compile them into one file",
     links: [{ label: "GitHub", url: "https://github.com/mizanxali/ariadne" }],
     tech: ["Node.js", "AssemblyAI", "FFmpeg"],
   },
@@ -233,6 +234,7 @@ const techMeta = {
   Ethereum: { slug: "ethereum" },
   "Google Maps": { slug: "googlemaps" },
   WebRTC: { custom: "webrtc" },
+  Posthog: { slug: "posthog", color: "white" },
 };
 ---
 
@@ -245,6 +247,7 @@ const techMeta = {
       name="description"
       content="Fullstack product engineer building at the intersection of complex frontend engineering and onchain realtime systems."
     />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -264,13 +267,14 @@ const techMeta = {
                 Mizan Ali<span class="inline-block w-[3px] h-[0.85em] bg-neutral-50 ml-1 align-middle animate-blink"></span>
               </h1>
               <p
-                class="mt-6 max-w-xl text-base leading-relaxed text-neutral-400 font-light md:text-lg"
+                class="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 font-light md:text-lg"
               >
-                I am a fullstack product engineer, with a strong frontend focus.
+                I am a fullstack product engineer, with a strong frontend focus.<br/>
                 Over the last 4 years, I have worked at the intersection of
-                complex frontend engineering and onchain realtime systems, most
-                recently as a Lead Product Engineer at Huddle01. I love building
-                consumer-facing apps in the web3 space.
+                <span class="hero-highlight hero-highlight-frontend">complex frontend engineering</span>,
+                <span class="hero-highlight hero-highlight-realtime">realtime systems</span>, and
+                <span class="hero-highlight hero-highlight-onchain">onchain interactions</span>.<br />I love building
+                consumer apps in the web3 space. I also enjoy writing developer documentation and creating technical video content.
               </p>
               <p class="mt-3 text-sm text-neutral-500 font-light">
                 Abu Dhabi, UAE
@@ -287,7 +291,7 @@ const techMeta = {
             </section>
           </div>
 
-          <div class="mt-10 border-t border-white/8 pt-6 lg:mt-8">
+          <div class="mt-0 pt-6 lg:mt-8">
             <div class="mt-4 flex flex-wrap gap-4">
               {
                 [
@@ -328,187 +332,249 @@ const techMeta = {
         >
           <section id="work" class="scroll-mt-24">
             <div class="max-w-4xl">
-              <div class="scroll-animate">
-                <div>
-                  <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
-                    Things shipped at Huddle01
-                  </h3>
-                  <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
-                    Lead Product Engineer, Jan 2023 - Mar 2026. Built core products across web3 and webRTC tech stacks using TypeScript.
-                  </p>
-                </div>
-
-                <div class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
-                  {
-                    huddle01Projects.map((project, i) => (
-                      <article
-                        class="group scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80 transition-all duration-500 hover:border-white/16 hover:bg-neutral-900/80"
-                        style={`transition-delay: ${i * 50}ms`}
-                      >
-                        <div class="relative aspect-[16/9] overflow-hidden border-b border-white/8 bg-neutral-900">
-                          {project.image ? (
-                            <img
-                              src={project.image}
-                              alt={project.name}
-                              loading="lazy"
-                              class="absolute inset-0 h-full w-full object-cover object-top opacity-80 transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
-                            />
-                          ) : (
-                            <div class="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,#101010_0%,#171717_50%,#0a0a0a_100%)]">
-                              <div class="flex items-center gap-4">
-                                <div class="border border-white/12 p-3">
-                                  <svg
-                                    class="h-7 w-7 text-neutral-200"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.6"
-                                    aria-hidden="true"
-                                  >
-                                    <rect x="4.5" y="4.5" width="15" height="15"></rect>
-                                    <path d="M8 9.5h8"></path>
-                                    <path d="M8 13h8"></path>
-                                    <path d="M8 16.5h4.5"></path>
-                                  </svg>
-                                </div>
-                                <div class="border border-white/12 p-3">
-                                  <svg
-                                    class="h-7 w-7 text-neutral-400"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.6"
-                                    aria-hidden="true"
-                                  >
-                                    <path d="M6 7.5h12"></path>
-                                    <path d="M6 12h12"></path>
-                                    <path d="M6 16.5h7"></path>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                        <div class="p-5">
-                          <div class="flex items-center justify-between gap-4">
-                            <h4 class="text-base font-semibold text-neutral-100 transition-colors group-hover:text-white">
-                              {project.name}
-                            </h4>
-                            <svg
-                              class="h-3.5 w-3.5 shrink-0 text-neutral-600 transition-colors group-hover:text-neutral-300"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              stroke-width="2"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M7 17L17 7M17 7H7M17 7v10"
-                              />
-                            </svg>
-                          </div>
-                          <p class="mt-2 text-sm leading-relaxed text-neutral-500 transition-colors group-hover:text-neutral-400">
-                            {project.description}
-                          </p>
-                          <div class="mt-5 border-t border-white/8 pt-4">
-                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
-                              Links
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2">
-                              {
-                                project.links.map((link) => (
-                                  <a
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300 transition-all duration-300 hover:border-white/20 hover:bg-white/4 hover:text-white"
-                                  >
-                                    <span>{link.label}</span>
-                                    <svg
-                                      class="h-3 w-3 text-neutral-500 transition-colors group-hover:text-neutral-300"
-                                      fill="none"
-                                      viewBox="0 0 24 24"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                    >
-                                      <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M7 17L17 7M17 7H7M17 7v10"
-                                      />
-                                    </svg>
-                                  </a>
-                                ))
-                              }
-                            </div>
-                          </div>
-                          <div class="mt-4 border-t border-white/8 pt-4">
-                            <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
-                              Stack
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2">
-                              {
-                                project.tech.map((tech) => {
-                                  const meta = techMeta[tech] ?? null;
-                                  return (
-                                    <span class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300">
-                                      {meta?.custom === "webrtc" ? (
-                                        <svg
-                                          class="h-3.5 w-3.5 text-neutral-300"
-                                          viewBox="0 0 24 24"
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-width="1.8"
-                                          aria-hidden="true"
-                                        >
-                                          <circle cx="12" cy="12" r="2.25"></circle>
-                                          <path d="M5.5 8.5a9 9 0 0 1 0 7"></path>
-                                          <path d="M18.5 8.5a9 9 0 0 0 0 7"></path>
-                                          <path d="M8.5 10.25a4.8 4.8 0 0 1 0 3.5"></path>
-                                          <path d="M15.5 10.25a4.8 4.8 0 0 0 0 3.5"></path>
-                                        </svg>
-                                      ) : meta?.slug ? (
-                                        <>
-                                          <img
-                                            src={meta.color
-                                              ? `https://cdn.simpleicons.org/${meta.slug}/${meta.color}`
-                                              : `https://cdn.simpleicons.org/${meta.slug}`}
-                                            alt=""
-                                            loading="lazy"
-                                            class="h-3.5 w-3.5 opacity-90"
-                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                                          />
-                                          <span
-                                            class="hidden h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400"
-                                          >
-                                            {meta.fallback ?? tech.slice(0, 2)}
-                                          </span>
-                                        </>
-                                      ) : meta?.fallback ? (
-                                        <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400">
-                                          {meta.fallback}
-                                        </span>
-                                      ) : (
-                                        <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[8px] uppercase text-neutral-400">
-                                          {tech.slice(0, 1)}
-                                        </span>
-                                      )}
-                                      <span>{tech}</span>
-                                    </span>
-                                  );
-                                })
-                              }
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                    ))
-                  }
+              <div class="sticky top-0 z-20 -mx-2 px-2 pb-6 pt-1">
+                <div class="border border-white/8 bg-neutral-950/85 p-2 backdrop-blur">
+                  <div
+                    class="flex flex-wrap gap-2"
+                    role="tablist"
+                    aria-label="Work sections"
+                  >
+                    <button
+                      type="button"
+                      id="work-tab-huddle01"
+                      class="work-tab"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="work-panel-huddle01"
+                      tabindex="0"
+                      data-work-tab="huddle01"
+                    >
+                      Huddle01
+                    </button>
+                    <button
+                      type="button"
+                      id="work-tab-projects"
+                      class="work-tab"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="work-panel-projects"
+                      tabindex="-1"
+                      data-work-tab="projects"
+                    >
+                      Projects
+                    </button>
+                    <button
+                      type="button"
+                      id="work-tab-videos"
+                      class="work-tab"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="work-panel-videos"
+                      tabindex="-1"
+                      data-work-tab="videos"
+                    >
+                      Videos
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <section class="mt-16">
+              <section
+                id="work-panel-huddle01"
+                class="work-panel"
+                role="tabpanel"
+                aria-labelledby="work-tab-huddle01"
+                data-work-panel="huddle01"
+              >
+                <div class="scroll-animate">
+                  <div>
+                    <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
+                      Things shipped at Huddle01
+                    </h3>
+                    <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
+                      Lead Product Engineer, Jan 2023 - Mar 2026. Built core products across web3 and webRTC tech stacks using TypeScript.
+                    </p>
+                  </div>
+
+                  <div class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
+                    {
+                      huddle01Projects.map((project, i) => (
+                        <article
+                          class="group scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80 transition-all duration-500 hover:border-white/16 hover:bg-neutral-900/80"
+                          style={`transition-delay: ${i * 50}ms`}
+                        >
+                          <div class="relative aspect-[16/9] overflow-hidden border-b border-white/8 bg-neutral-900">
+                            {project.image ? (
+                              <img
+                                src={project.image}
+                                alt={project.name}
+                                loading="lazy"
+                                class="absolute inset-0 h-full w-full object-cover object-top opacity-80 transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                              />
+                            ) : (
+                              <div class="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,#101010_0%,#171717_50%,#0a0a0a_100%)]">
+                                <div class="flex items-center gap-4">
+                                  <div class="border border-white/12 p-3">
+                                    <svg
+                                      class="h-7 w-7 text-neutral-200"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.6"
+                                      aria-hidden="true"
+                                    >
+                                      <rect x="4.5" y="4.5" width="15" height="15"></rect>
+                                      <path d="M8 9.5h8"></path>
+                                      <path d="M8 13h8"></path>
+                                      <path d="M8 16.5h4.5"></path>
+                                    </svg>
+                                  </div>
+                                  <div class="border border-white/12 p-3">
+                                    <svg
+                                      class="h-7 w-7 text-neutral-400"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="1.6"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M6 7.5h12"></path>
+                                      <path d="M6 12h12"></path>
+                                      <path d="M6 16.5h7"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                          <div class="p-5">
+                            <div class="flex items-center justify-between gap-4">
+                              <h4 class="text-base font-semibold text-neutral-100 transition-colors group-hover:text-white">
+                                {project.name}
+                              </h4>
+                              <svg
+                                class="h-3.5 w-3.5 shrink-0 text-neutral-600 transition-colors group-hover:text-neutral-300"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M7 17L17 7M17 7H7M17 7v10"
+                                />
+                              </svg>
+                            </div>
+                            <p class="mt-2 text-sm leading-relaxed text-neutral-500 transition-colors group-hover:text-neutral-400">
+                              {project.description}
+                            </p>
+                            <div class="mt-5 border-t border-white/8 pt-4">
+                              <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                                Links
+                              </p>
+                              <div class="mt-3 flex flex-wrap gap-2">
+                                {
+                                  project.links.map((link) => (
+                                    <a
+                                      href={link.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300 transition-all duration-300 hover:border-white/20 hover:bg-white/4 hover:text-white"
+                                    >
+                                      <span>{link.label}</span>
+                                      <svg
+                                        class="h-3 w-3 text-neutral-500 transition-colors group-hover:text-neutral-300"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M7 17L17 7M17 7H7M17 7v10"
+                                        />
+                                      </svg>
+                                    </a>
+                                  ))
+                                }
+                              </div>
+                            </div>
+                            <div class="mt-4 border-t border-white/8 pt-4">
+                              <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+                                Stack
+                              </p>
+                              <div class="mt-3 flex flex-wrap gap-2">
+                                {
+                                  project.tech.map((tech) => {
+                                    const meta = techMeta[tech] ?? null;
+                                    return (
+                                      <span class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300">
+                                        {meta?.custom === "webrtc" ? (
+                                          <svg
+                                            class="h-3.5 w-3.5 text-neutral-300"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            aria-hidden="true"
+                                          >
+                                            <circle cx="12" cy="12" r="2.25"></circle>
+                                            <path d="M5.5 8.5a9 9 0 0 1 0 7"></path>
+                                            <path d="M18.5 8.5a9 9 0 0 0 0 7"></path>
+                                            <path d="M8.5 10.25a4.8 4.8 0 0 1 0 3.5"></path>
+                                            <path d="M15.5 10.25a4.8 4.8 0 0 0 0 3.5"></path>
+                                          </svg>
+                                        ) : meta?.slug ? (
+                                          <>
+                                            <img
+                                              src={meta.color
+                                                ? `https://cdn.simpleicons.org/${meta.slug}/${meta.color}`
+                                                : `https://cdn.simpleicons.org/${meta.slug}`}
+                                              alt=""
+                                              loading="lazy"
+                                              class="h-3.5 w-3.5 opacity-90"
+                                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            />
+                                            <span
+                                              class="hidden h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400"
+                                            >
+                                              {meta.fallback ?? tech.slice(0, 2)}
+                                            </span>
+                                          </>
+                                        ) : meta?.fallback ? (
+                                          <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400">
+                                            {meta.fallback}
+                                          </span>
+                                        ) : (
+                                          <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[8px] uppercase text-neutral-400">
+                                            {tech.slice(0, 1)}
+                                          </span>
+                                        )}
+                                        <span>{tech}</span>
+                                      </span>
+                                    );
+                                  })
+                                }
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      ))
+                    }
+                  </div>
+                </div>
+              </section>
+
+              <section
+                id="work-panel-projects"
+                class="work-panel"
+                role="tabpanel"
+                aria-labelledby="work-tab-projects"
+                data-work-panel="projects"
+                hidden
+              >
                 <div class="scroll-animate">
                   <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
                     Side Projects
@@ -698,7 +764,14 @@ const techMeta = {
                 </p>
               </section>
 
-              <section class="mt-16">
+              <section
+                id="work-panel-videos"
+                class="work-panel"
+                role="tabpanel"
+                aria-labelledby="work-tab-videos"
+                data-work-panel="videos"
+                hidden
+              >
                 <div class="scroll-animate">
                   <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
                     Talks & Videos
@@ -827,6 +900,46 @@ const techMeta = {
         animation: fade-in 0.8s ease-out;
       }
 
+      .hero-highlight {
+        position: relative;
+        display: inline-block;
+        padding: 0 0.18em;
+        color: rgb(250 250 250);
+        isolation: isolate;
+      }
+
+      .hero-highlight::before {
+        content: "";
+        position: absolute;
+        inset: -0.1em -0.08em 0;
+        background: var(--highlight-fill);
+        clip-path: polygon(1% 18%, 99% 6%, 97% 92%, 4% 100%);
+        box-shadow:
+          0 0 0 1px var(--highlight-border),
+          0 0 24px var(--highlight-glow);
+        transform: rotate(-0.8deg);
+        transform-origin: center;
+        z-index: -1;
+      }
+
+      .hero-highlight-frontend {
+        --highlight-fill: rgba(251, 146, 60, 0.22);
+        --highlight-border: rgba(251, 146, 60, 0.34);
+        --highlight-glow: rgba(251, 146, 60, 0.24);
+      }
+
+      .hero-highlight-realtime {
+        --highlight-fill: rgba(56, 189, 248, 0.2);
+        --highlight-border: rgba(56, 189, 248, 0.32);
+        --highlight-glow: rgba(56, 189, 248, 0.22);
+      }
+
+      .hero-highlight-onchain {
+        --highlight-fill: rgba(74, 222, 128, 0.2);
+        --highlight-border: rgba(74, 222, 128, 0.32);
+        --highlight-glow: rgba(74, 222, 128, 0.22);
+      }
+
       .scroll-animate {
         opacity: 0;
         transform: translateY(20px);
@@ -838,6 +951,52 @@ const techMeta = {
       .scroll-animate.visible {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      .work-tab {
+        border: 1px solid rgba(250, 250, 250, 0.08);
+        padding: 0.65rem 0.95rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgb(163 163 163);
+        transition:
+          border-color 0.25s ease,
+          background-color 0.25s ease,
+          color 0.25s ease;
+      }
+
+      .work-tab:hover {
+        border-color: rgba(250, 250, 250, 0.18);
+        color: rgb(245 245 245);
+      }
+
+      .work-tab[aria-selected="true"] {
+        border-color: rgba(250, 250, 250, 0.18);
+        background: rgba(250, 250, 250, 0.08);
+        color: rgb(250 250 250);
+      }
+
+      .work-tab:focus-visible {
+        outline: 2px solid rgba(250, 250, 250, 0.24);
+        outline-offset: 2px;
+      }
+
+      .work-panel[hidden] {
+        display: none;
+      }
+
+      @media (max-width: 1023px) {
+        .animate-fade-in {
+          animation: none;
+        }
+
+        .scroll-animate {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
       }
 
       #content-pane {
@@ -862,8 +1021,13 @@ const techMeta = {
 
     <script>
       const contentPane = document.querySelector("#content-pane");
-      const animatedElements = document.querySelectorAll(".scroll-animate");
+      const workSection = document.querySelector("#work");
+      const workTabs = Array.from(document.querySelectorAll("[data-work-tab]"));
       const isDesktop = () => window.matchMedia("(min-width: 1024px)").matches;
+      const getAnimatedElements = () =>
+        Array.from(document.querySelectorAll(".scroll-animate")).filter(
+          (element) => !element.closest("[hidden]")
+        );
 
       const createObserver = () =>
         new IntersectionObserver(
@@ -885,6 +1049,15 @@ const techMeta = {
 
       const observeAnimatedElements = () => {
         observer.disconnect();
+        const animatedElements = getAnimatedElements();
+
+        if (!isDesktop()) {
+          animatedElements.forEach((el) => {
+            el.classList.add("visible");
+          });
+          return;
+        }
+
         observer = createObserver();
         animatedElements.forEach((el) => {
           observer.observe(el);
@@ -894,6 +1067,74 @@ const techMeta = {
       observeAnimatedElements();
 
       window.addEventListener("resize", observeAnimatedElements);
+
+      const setActiveWorkTab = (tabName, options = {}) => {
+        const { focus = false } = options;
+        const activeTab = workTabs.find((tab) => tab.dataset.workTab === tabName);
+
+        if (!activeTab) return;
+
+        workTabs.forEach((tab) => {
+          const isActive = tab === activeTab;
+          const panelId = tab.getAttribute("aria-controls");
+          const panel = panelId ? document.getElementById(panelId) : null;
+
+          tab.setAttribute("aria-selected", String(isActive));
+          tab.tabIndex = isActive ? 0 : -1;
+
+          if (panel) {
+            panel.hidden = !isActive;
+          }
+        });
+
+        if (focus) {
+          activeTab.focus();
+        }
+
+        // Desktop uses the right-side pane as the scroll container; mobile uses the page.
+        if (isDesktop() && contentPane) {
+          contentPane.scrollTop = 0;
+        } else if (workSection) {
+          const top = workSection.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top, behavior: "auto" });
+        }
+
+        observeAnimatedElements();
+      };
+
+      workTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          setActiveWorkTab(tab.dataset.workTab);
+        });
+
+        tab.addEventListener("keydown", (event) => {
+          if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) {
+            return;
+          }
+
+          event.preventDefault();
+
+          let nextIndex = index;
+
+          if (event.key === "ArrowRight") {
+            nextIndex = (index + 1) % workTabs.length;
+          }
+
+          if (event.key === "ArrowLeft") {
+            nextIndex = (index - 1 + workTabs.length) % workTabs.length;
+          }
+
+          if (event.key === "Home") {
+            nextIndex = 0;
+          }
+
+          if (event.key === "End") {
+            nextIndex = workTabs.length - 1;
+          }
+
+          setActiveWorkTab(workTabs[nextIndex].dataset.workTab, { focus: true });
+        });
+      });
 
       document.querySelectorAll("[data-pane-link]").forEach((link) => {
         link.addEventListener("click", (event) => {
