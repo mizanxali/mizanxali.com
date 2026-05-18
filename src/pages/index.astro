@@ -108,6 +108,33 @@ const personalProjects = [
     tech: ["React Native", "Expo", "Bluetooth", "Zustand"],
   },
   {
+    name: "UNO Online",
+    description: "Real-time 1v1 UNO card game",
+    image: "/uno.webp",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/uno-online" },
+      { label: "YouTube", url: "https://www.youtube.com/watch?v=FBAJdbpFnjs" },
+    ],
+    tech: ["React", "Node.js", "Socket.IO"],
+  },
+  {
+    name: "react-webpify",
+    description:
+      "npm package for using optimized WebP images in React apps with graceful fallbacks",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/react-webpify" },
+      { label: "npm", url: "https://www.npmjs.com/package/react-webpify" },
+    ],
+    tech: ["Node.js", "npm"],
+  },
+  {
+    name: "Ariadne",
+    description:
+      "Node.js AI service to download YouTube videos, extract segments of a specific speaker, and compile them into one file",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/ariadne" }],
+    tech: ["Node.js", "AssemblyAI", "FFmpeg"],
+  },
+  {
     name: "arbchain.dev",
     description:
       "Arbitrum rollup configurator app that generates deployment scripts using their SDK and a post-deployment onchain verifier",
@@ -136,57 +163,59 @@ const personalProjects = [
     ],
     tech: ["Next.js", "Tailwind", "Solidity", "Firebase", "Wagmi", "Polygon"],
   },
- 
-  {
-    name: "Ariadne",
-    description:
-      "Node.js AI service to download YouTube videos, extract segments of a specific speaker, and compile them into one file",
-    links: [{ label: "GitHub", url: "https://github.com/mizanxali/ariadne" }],
-    tech: ["Node.js", "AssemblyAI", "FFmpeg"],
-  },
   {
     name: "Triarchy",
     description: "Real-time 1v1 on-chain card battle game",
     image: "/triarchy.webp",
     links: [{ label: "GitHub", url: "https://github.com/mizanxali/triarchy" }],
     tech: ["Next.js", "Tailwind", "Solidity", "Partykit", "Wagmi"],
-  },
-  {
-    name: "UNO Online",
-    description: "Real-time 1v1 UNO card game",
-    image: "/uno.webp",
-    links: [
-      { label: "GitHub", url: "https://github.com/mizanxali/uno-online" },
-      { label: "YouTube", url: "https://www.youtube.com/watch?v=FBAJdbpFnjs" },
-    ],
-    tech: ["React", "Node.js", "Socket.IO"],
-  },
+  }
 ];
 
-const videos = [
+const contentItems = [
   {
+    type: "video",
     name: "Huddle01 Video Library",
     url: "https://www.youtube.com/playlist?list=PLegd1MLQ2KqEhjeGbFfDJSTN6FogFRFgc",
     description: "Playlist of video content created for Huddle01",
     placeholder: "playlist",
   },
   {
+    type: "video",
     name: "ETHIndia 2023 Workshop",
     url: "https://www.youtube.com/watch?v=1buGBl2UQNI",
     description: "IRL workshop at ETHGlobal's ETHIndia 2023",
     embedUrl: "https://www.youtube.com/embed/1buGBl2UQNI",
   },
   {
+    type: "video",
     name: "ETHGlobal Tokyo 2023",
     url: "https://www.youtube.com/watch?v=iBej0ze9iB0&t=360s",
     description: "Virtual workshop for ETHGlobal Tokyo 2023",
     embedUrl: "https://www.youtube.com/embed/iBej0ze9iB0",
   },
   {
+    type: "video",
     name: "UNO Online Tutorial",
     url: "https://www.youtube.com/watch?v=FBAJdbpFnjs",
     description: "Tutorial on building a realtime UNO card game",
     embedUrl: "https://www.youtube.com/embed/FBAJdbpFnjs",
+  },
+  {
+    type: "blog",
+    name: "React Native 101: The only bottom sheet guide you'll ever need",
+    url: "https://huddle01.hashnode.dev/react-native-101-the-only-bottom-sheet-guide-youll-ever-need",
+    description: "A step-by-step walkthrough to create a reusable, customizable bottom sheet component in React Native.",
+    image: "/bottom-sheet-blog.webp",
+    meta: "Blog · 8 min read",
+  },
+  {
+    type: "blog",
+    name: "Recreating Valorant's in-game voice chat system using Huddle01 SDK",
+    url: "https://huddle01.hashnode.dev/recreating-valorants-in-game-voice-chat-system-using-huddle01-sdk",
+    description: "A guide to building a push-to-talk team and party voice chat system with the Huddle01 SDK.",
+    image: "/valorant-blog.webp",
+    meta: "Blog · 13 min read",
   },
 ];
 
@@ -221,7 +250,7 @@ const techMeta = {
   "LiveKit": { slug: "livekit" },
   "Expo": { slug: "expo", color: "white" },
   "Bluetooth": { slug: "bluetooth" },
-  "MPP": { slug: "modelcontextprotocol", color: "white" },
+  "npm": { slug: "npm" },
   "Move": { slug: "sui" },
   "WebRTC": { slug: "webrtc", color: "white" },
 };
@@ -358,15 +387,15 @@ const techMeta = {
                     </button>
                     <button
                       type="button"
-                      id="work-tab-videos"
+                      id="work-tab-content"
                       class="work-tab"
                       role="tab"
                       aria-selected="false"
-                      aria-controls="work-panel-videos"
+                      aria-controls="work-panel-content"
                       tabindex="-1"
-                      data-work-tab="videos"
+                      data-work-tab="content"
                     >
-                      Videos
+                      Content
                     </button>
                   </div>
                 </div>
@@ -687,33 +716,47 @@ const techMeta = {
               </section>
 
               <section
-                id="work-panel-videos"
+                id="work-panel-content"
                 class="work-panel"
                 role="tabpanel"
-                aria-labelledby="work-tab-videos"
-                data-work-panel="videos"
+                aria-labelledby="work-tab-content"
+                data-work-panel="content"
                 hidden
               >
                 <div class="scroll-animate">
                   <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
-                    Talks & Videos
+                    Content
                   </h3>
                   <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
-                    Workshops, walkthroughs, and product-focused video content.
+                    Blogs, workshops, walkthroughs, and product-focused video content.
                   </p>
                 </div>
 
                 <div class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2">
                   {
-                    videos.map((video, i) => (
+                    contentItems.map((item, i) => (
                       <div
                         class="scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80"
                         style={`transition-delay: ${i * 50}ms`}
                       >
                         <div class="aspect-video border-b border-white/8">
-                          {video.placeholder === "playlist" ? (
+                          {item.type === "blog" ? (
                             <a
-                              href={video.url}
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="group block h-full w-full overflow-hidden bg-neutral-900"
+                            >
+                              <img
+                                src={item.image}
+                                alt=""
+                                loading="lazy"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                              />
+                            </a>
+                          ) : item.placeholder === "playlist" ? (
+                            <a
+                              href={item.url}
                               target="_blank"
                               rel="noopener noreferrer"
                               class="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,#111111_0%,#171717_45%,#0a0a0a_100%)] px-8 text-center transition-colors duration-300 hover:bg-neutral-900"
@@ -746,8 +789,8 @@ const techMeta = {
                             </a>
                           ) : (
                             <iframe
-                              src={video.embedUrl}
-                              title={video.name}
+                              src={item.embedUrl}
+                              title={item.name}
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowfullscreen
                               loading="lazy"
@@ -757,10 +800,10 @@ const techMeta = {
                         </div>
                         <div class="p-5">
                           <h4 class="text-base font-semibold text-neutral-100">
-                            {video.name}
+                            {item.name}
                           </h4>
                           <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-                            {video.description}
+                            {item.description}
                           </p>
                         </div>
                       </div>
