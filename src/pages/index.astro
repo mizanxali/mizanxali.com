@@ -282,9 +282,9 @@ const techMeta = {
   >
     <div class="min-h-screen lg:h-screen">
       <div class="lg:grid lg:h-screen lg:grid-cols-2">
-        <aside class="border-b border-white/8 px-6 py-8 lg:flex lg:min-h-screen lg:flex-col lg:justify-between lg:border-b-0 lg:border-r lg:px-10 lg:py-10">
+        <aside class="border-b border-white/8 px-6 py-8 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:border-b-0 lg:border-r lg:px-10 lg:py-10">
           <div>
-            <section class="animate-fade-in pt-8 lg:flex lg:min-h-[calc(100vh-14rem)] lg:flex-col lg:justify-center lg:pt-0">
+            <section class="animate-fade-in pt-8 lg:pt-0">
               <h1 class="mt-4 text-5xl font-bold tracking-tight leading-none md:text-7xl">
                 Mizan Ali<span class="inline-block w-[3px] h-[0.85em] bg-neutral-50 ml-1 align-middle animate-blink"></span>
               </h1>
@@ -298,9 +298,6 @@ const techMeta = {
                 <span class="hero-highlight hero-highlight-onchain">onchain interactions</span>.<br />I love building
                 consumer apps in the web3 space. I also enjoy writing developer documentation and creating technical video content.
               </p>
-              <p class="mt-3 text-sm text-neutral-500 font-light">
-                Abu Dhabi, UAE
-              </p>
               <div class="mt-8 flex flex-wrap items-center gap-3">
                 <a
                   href="/resume.pdf"
@@ -310,40 +307,107 @@ const techMeta = {
                   >Resume</a
                 >
               </div>
+              <div class="mt-6 flex flex-wrap gap-4">
+                {
+                  [
+                    { label: "Twitter", url: "https://twitter.com/mizanxali" },
+                    { label: "GitHub", url: "https://github.com/mizanxali" },
+                    {
+                      label: "LinkedIn",
+                      url: "https://linkedin.com/in/mizanxali",
+                    },
+                    { label: "Telegram", url: "https://t.me/mizanxali" },
+                  ].map((link) => (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sm text-neutral-400 transition-colors duration-300 hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  ))
+                }
+              </div>
             </section>
           </div>
 
-          <div class="mt-0 pt-6 lg:mt-8">
-            <div class="mt-4 flex flex-wrap gap-4">
-              {
-                [
-                  {
-                    label: "Twitter",
-                    url: "https://twitter.com/mizanxali",
-                  },
-                  {
-                    label: "GitHub",
-                    url: "https://github.com/mizanxali",
-                  },
-                  {
-                    label: "LinkedIn",
-                    url: "https://linkedin.com/in/mizanxali",
-                  },
-                  {
-                    label: "Telegram",
-                    url: "https://t.me/mizanxali",
-                  },
-                ].map((link) => (
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm text-neutral-400 transition-colors duration-300 hover:text-white"
+          <div class="mt-8">
+            <div class="max-w-xl">
+              <a
+                href="https://x.com/ranjan3118/status/2028495370154914159"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block border border-white/8 bg-neutral-950/80 p-5 transition-all duration-300 hover:border-white/16 hover:bg-neutral-900/80"
+              >
+                <div class="flex items-center gap-3">
+                  <img
+                    src="/ayush-ranjan.webp"
+                    alt="Ayush Ranjan"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    class="h-10 w-10 shrink-0 rounded-full object-cover"
+                  />
+                  <div class="min-w-0">
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-medium text-neutral-100"
+                        >Ayush Ranjan</span
+                      >
+                      <svg
+                        viewBox="0 0 24 24"
+                        aria-label="Verified account"
+                        class="h-4 w-4 shrink-0 text-sky-400"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-xs text-neutral-500">Founder and CEO, Huddle01</p>
+                  </div>
+                  <span
+                    class="ml-auto shrink-0 text-neutral-500 transition-colors duration-300 group-hover:text-neutral-200"
                   >
-                    {link.label}
-                  </a>
-                ))
-              }
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="mt-4 space-y-2 text-sm font-light leading-relaxed text-neutral-300"
+                >
+                  <p>
+                    If you are building anything consumer-centric and want
+                    someone who is a combination of 10x dev + can think from
+                    product POV, swoop in
+                    <span class="text-neutral-100">@mizanxali</span>'s DM for a
+                    chat ASAP.
+                  </p>
+                  <p>
+                    Worked with Mizan for over 3 years now, and I can
+                    confidently say that he is a high agency person, with an
+                    extreme bias for action, a straight shooter and will give
+                    you the most honest feedback ever.
+                  </p>
+                  <p>
+                    At Huddle01, he played one of the most important roles in
+                    building numerous consumer-centric plays, followed by SDKs
+                    and whatnot. The list goes on.
+                  </p>
+                  <p class="text-neutral-200">
+                    <span class="font-medium">TLDR:</span> Any org will be lucky
+                    to have him.
+                  </p>
+                </div>
+                <span
+                  class="mt-4 inline-block text-xs text-neutral-500 transition-colors duration-300 group-hover:text-neutral-200"
+                  >Read on X →</span
+                >
+              </a>
             </div>
           </div>
         </aside>
