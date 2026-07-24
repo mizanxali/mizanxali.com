@@ -10,47 +10,6 @@ export const personalProjects: Project[] = [
     tech: ["React Native", "Expo", "Hono", "CF Workers", "Supabase", "Postgres", "Drizzle"],
   },
   {
-    name: "Heimdall",
-    description:
-      "Offline peer-to-peer friend finder - two phones swap GPS over Bluetooth and WiFi Direct, then a live compass points you at each other with no internet",
-    image: "/heimdall.webp",
-    links: [{ label: "GitHub", url: "https://github.com/mizanxali/heimdall" }],
-    tech: ["React Native", "Expo", "Bluetooth", "Zustand"],
-  },
-  {
-    name: "Kohli vs The Dollar",
-    description:
-      "Race to 100 between Virat Kohli's international centuries and the price of a US dollar in rupees, with a live public poll backed by a Durable Object",
-    image: "/kohli-vs-dollar.webp",
-    links: [
-      { label: "Live Site", url: "https://kohlivsthedollar.fun" },
-      { label: "GitHub", url: "https://github.com/mizanxali/kohli-vs-dollar" },
-    ],
-    tech: ["React", "Vite", "Tailwind", "CF Workers", "Durable Objects"],
-  },
-  {
-    name: "Shakespeare for Bharat",
-    description:
-      "Read every Shakespeare play, then translate or listen to any speech in 22 Indian languages",
-    image: "/shakespeare.webp",
-    links: [
-      { label: "Live Site", url: "https://shakespeare-for-bharat.vercel.app" },
-      { label: "GitHub", url: "https://github.com/mizanxali/shakespeare-for-bharat" },
-    ],
-    tech: ["Next.js", "Tailwind", "TypeScript", "Sarvam AI", "Vercel"],
-  },
-  {
-    name: "NBA Buddy",
-    description:
-      "AI companion app for NBA fans - ask anything about teams, players and stats, bookmark replies, and add upcoming games to your calendar",
-    image: "/nba-buddy.webp",
-    links: [
-      { label: "GitHub", url: "https://github.com/mizanxali/nba-buddy" },
-      { label: "YouTube", url: "https://www.youtube.com/shorts/8IzNrx66ejo" },
-    ],
-    tech: ["React Native", "Expo", "Gemini", "Hono", "CF Workers"],
-  },
-  {
     name: "Visage",
     description:
       "Desktop app for finding photos of yourself from a large album using face recognition ML, fully offline",
@@ -71,6 +30,47 @@ export const personalProjects: Project[] = [
       { label: "Devfolio", url: "https://devfolio.co/projects/pit-stop-a06f" },
     ],
     tech: ["Next.js", "Tailwind", "Solidity", "Firebase", "Wagmi", "Polygon"],
+  },
+  {
+    name: "Heimdall",
+    description:
+      "Offline peer-to-peer friend finder - two phones swap GPS over Bluetooth and WiFi Direct, then a live compass points you at each other with no internet",
+    image: "/heimdall.webp",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/heimdall" }],
+    tech: ["React Native", "Expo", "Bluetooth", "Zustand"],
+  },
+  {
+    name: "Kohli vs The Dollar",
+    description:
+      "Race to 100 between Virat Kohli's international centuries and the price of a US dollar in rupees, with a live public poll backed by a Durable Object",
+    image: "/kohli-vs-dollar.webp",
+    links: [
+      { label: "Live Site", url: "https://kohlivsthedollar.fun" },
+      { label: "GitHub", url: "https://github.com/mizanxali/kohli-vs-dollar" },
+    ],
+    tech: ["React", "Vite", "Tailwind", "CF Workers", "Durable Objects"],
+  },
+  {
+    name: "NBA Buddy",
+    description:
+      "AI companion app for NBA fans - ask anything about teams, players and stats, bookmark replies, and add upcoming games to your calendar",
+    image: "/nba-buddy.webp",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/nba-buddy" },
+      { label: "YouTube", url: "https://www.youtube.com/shorts/8IzNrx66ejo" },
+    ],
+    tech: ["React Native", "Expo", "Gemini", "Hono", "CF Workers"],
+  },
+  {
+    name: "Shakespeare for Bharat",
+    description:
+      "Read every Shakespeare play, then translate or listen to any speech in 22 Indian languages",
+    image: "/shakespeare.webp",
+    links: [
+      { label: "Live Site", url: "https://shakespeare-for-bharat.vercel.app" },
+      { label: "GitHub", url: "https://github.com/mizanxali/shakespeare-for-bharat" },
+    ],
+    tech: ["Next.js", "Tailwind", "TypeScript", "Sarvam AI", "Vercel"],
   },
   {
     name: "mpp-webrtc",
