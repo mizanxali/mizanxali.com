@@ -6,7 +6,7 @@ export const personalProjects: Project[] = [
     description:
       "Flighty for cricket - mobile app to log every match watched live in a stadium, with a growing world map, stats, and a friends feed",
     image: "/floodlights.webp",
-    links: [{ label: "Live Site", url: "https://floodlights.mizanxali.com" }],
+    links: [{ label: "Live Site", url: "https://floodlights.mizanxali.com" }, { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.mizanxali.floodlights" }],
     tech: ["React Native", "Expo", "Hono", "CF Workers", "Supabase", "Postgres", "Drizzle"],
   },
   {
