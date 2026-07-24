@@ -1,0 +1,98 @@
+/* Hero */
+
+.hero-highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.18em;
+  color: rgb(250 250 250);
+  isolation: isolate;
+}
+
+.hero-highlight::before {
+  content: "";
+  position: absolute;
+  inset: -0.1em -0.08em 0;
+  background: var(--highlight-fill);
+  clip-path: polygon(1% 18%, 99% 6%, 97% 92%, 4% 100%);
+  box-shadow:
+    0 0 0 1px var(--highlight-border),
+    0 0 24px var(--highlight-glow);
+  transform: rotate(-0.8deg);
+  transform-origin: center;
+  z-index: -1;
+}
+
+.hero-highlight-frontend {
+  --highlight-fill: rgba(251, 146, 60, 0.22);
+  --highlight-border: rgba(251, 146, 60, 0.34);
+  --highlight-glow: rgba(251, 146, 60, 0.24);
+}
+
+.hero-highlight-realtime {
+  --highlight-fill: rgba(56, 189, 248, 0.2);
+  --highlight-border: rgba(56, 189, 248, 0.32);
+  --highlight-glow: rgba(56, 189, 248, 0.22);
+}
+
+.hero-highlight-onchain {
+  --highlight-fill: rgba(74, 222, 128, 0.2);
+  --highlight-border: rgba(74, 222, 128, 0.32);
+  --highlight-glow: rgba(74, 222, 128, 0.22);
+}
+
+/* Work tabs */
+
+.work-tab {
+  border: 1px solid rgba(250, 250, 250, 0.08);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(163 163 163);
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.work-tab:hover {
+  border-color: rgba(250, 250, 250, 0.18);
+  color: rgb(245 245 245);
+}
+
+.work-tab[aria-selected="true"] {
+  border-color: rgba(250, 250, 250, 0.18);
+  background: rgba(250, 250, 250, 0.08);
+  color: rgb(250 250 250);
+}
+
+.work-tab:focus-visible {
+  outline: 2px solid rgba(250, 250, 250, 0.24);
+  outline-offset: 2px;
+}
+
+.work-panel[hidden] {
+  display: none;
+}
+
+/* Desktop content pane */
+
+#content-pane {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(250, 250, 250, 0.14) transparent;
+}
+
+#content-pane::-webkit-scrollbar {
+  width: 10px;
+}
+
+#content-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#content-pane::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  background: rgba(250, 250, 250, 0.14);
+  background-clip: content-box;
+}

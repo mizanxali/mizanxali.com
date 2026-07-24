@@ -1,0 +1,44 @@
+---
+import { techMeta } from "../data/tech";
+
+interface Props {
+  tech: string;
+}
+
+const { tech } = Astro.props;
+
+const meta = techMeta[tech];
+const iconUrl = meta?.slug
+  ? `https://cdn.simpleicons.org/${meta.slug}${meta.color ? `/${meta.color}` : ""}`
+  : null;
+---
+
+<span
+  class="inline-flex items-center gap-2 border border-white/10 px-3 py-1.5 text-[11px] font-medium text-neutral-300"
+>
+  {
+    iconUrl ? (
+      <>
+        <img
+          src={iconUrl}
+          alt=""
+          loading="lazy"
+          class="h-3.5 w-3.5 opacity-90"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <span class="hidden h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400">
+          {meta?.fallback ?? tech.slice(0, 2)}
+        </span>
+      </>
+    ) : meta?.fallback ? (
+      <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[7px] uppercase leading-none text-neutral-400">
+        {meta.fallback}
+      </span>
+    ) : (
+      <span class="flex h-3.5 w-3.5 items-center justify-center border border-white/20 text-[8px] uppercase text-neutral-400">
+        {tech.slice(0, 1)}
+      </span>
+    )
+  }
+  <span>{tech}</span>
+</span>

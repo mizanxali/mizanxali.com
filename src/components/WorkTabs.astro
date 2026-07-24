@@ -1,0 +1,26 @@
+---
+import { workTabs } from "../data/site";
+---
+
+<div class="sticky top-0 z-20 -mx-2 px-2 pb-6 pt-1">
+  <div class="border border-white/8 bg-neutral-950/85 p-2 backdrop-blur">
+    <div class="flex flex-wrap gap-2" role="tablist" aria-label="Work sections">
+      {
+        workTabs.map((tab, i) => (
+          <button
+            type="button"
+            id={`work-tab-${tab.id}`}
+            class="work-tab"
+            role="tab"
+            aria-selected={i === 0 ? "true" : "false"}
+            aria-controls={`work-panel-${tab.id}`}
+            tabindex={i === 0 ? 0 : -1}
+            data-work-tab={tab.id}
+          >
+            {tab.label}
+          </button>
+        ))
+      }
+    </div>
+  </div>
+</div>

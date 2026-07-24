@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./animations.css";
+@import "./components.css";
 
 @theme {
   --font-geist: "Geist", system-ui, -apple-system, sans-serif;
@@ -13,4 +15,21 @@
   --color-neutral-200: #cccccc;
   --color-neutral-100: #ededed;
   --color-neutral-50: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3.5rem;
+  background: #0a0a0a;
+}
+
+body {
+  min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  html,
+  body {
+    height: 100%;
+  }
 }

@@ -1,0 +1,60 @@
+---
+import { testimonial } from "../data/site";
+import VerifiedBadge from "./icons/VerifiedBadge.astro";
+import XLogo from "./icons/XLogo.astro";
+---
+
+<div class="max-w-xl">
+  <a
+    href={testimonial.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group block border border-white/8 bg-neutral-950/80 p-5 transition-all duration-300 hover:border-white/16 hover:bg-neutral-900/80"
+  >
+    <div class="flex items-center gap-3">
+      <img
+        src={testimonial.avatar}
+        alt={testimonial.author}
+        width="40"
+        height="40"
+        loading="lazy"
+        class="h-10 w-10 shrink-0 rounded-full object-cover"
+      />
+      <div class="min-w-0">
+        <div class="flex items-center gap-1">
+          <span class="text-sm font-medium text-neutral-100">{testimonial.author}</span>
+          <VerifiedBadge class="h-4 w-4 shrink-0 text-sky-400" />
+        </div>
+        <p class="text-xs text-neutral-500">{testimonial.role}</p>
+      </div>
+      <span
+        class="ml-auto shrink-0 text-neutral-500 transition-colors duration-300 group-hover:text-neutral-200"
+      >
+        <XLogo class="h-4 w-4" />
+      </span>
+    </div>
+    <div class="mt-4 space-y-2 text-sm font-light leading-relaxed text-neutral-300">
+      <p>
+        If you are building anything consumer-centric and want someone who is a combination of 10x
+        dev + can think from product POV, swoop in
+        <span class="text-neutral-100">@mizanxali</span>'s DM for a chat ASAP.
+      </p>
+      <p>
+        Worked with Mizan for over 3 years now, and I can confidently say that he is a high agency
+        person, with an extreme bias for action, a straight shooter and will give you the most
+        honest feedback ever.
+      </p>
+      <p>
+        At Huddle01, he played one of the most important roles in building numerous
+        consumer-centric plays, followed by SDKs and whatnot. The list goes on.
+      </p>
+      <p class="text-neutral-200">
+        <span class="font-medium">TLDR:</span> Any org will be lucky to have him.
+      </p>
+    </div>
+    <span
+      class="mt-4 inline-block text-xs text-neutral-500 transition-colors duration-300 group-hover:text-neutral-200"
+      >Read on X →</span
+    >
+  </a>
+</div>

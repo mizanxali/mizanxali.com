@@ -1,0 +1,42 @@
+---
+import { site, socialLinks } from "../data/site";
+---
+
+<section class="animate-fade-in pt-8 lg:pt-0">
+  <h1 class="mt-4 text-5xl font-bold tracking-tight leading-none md:text-7xl">
+    Mizan Ali<span
+      class="inline-block w-[3px] h-[0.85em] bg-neutral-50 ml-1 align-middle animate-blink"></span>
+  </h1>
+  <p class="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 font-light md:text-lg">
+    I am a fullstack product engineer, with a strong frontend focus.<br />
+    Over the last 4 years, I have worked at the intersection of
+    <span class="hero-highlight hero-highlight-frontend">complex frontend engineering</span>,
+    <span class="hero-highlight hero-highlight-realtime">realtime systems</span>, and
+    <span class="hero-highlight hero-highlight-onchain">onchain interactions</span>.<br />I love
+    building consumer apps in the web3 space. I also enjoy writing developer documentation and
+    creating technical video content.
+  </p>
+  <div class="mt-8 flex flex-wrap items-center gap-3">
+    <a
+      href={site.resumeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="border border-white/10 px-5 py-2.5 text-sm font-medium text-neutral-300 transition-all duration-300 hover:border-white/20 hover:text-neutral-50"
+      >Resume</a
+    >
+  </div>
+  <div class="mt-6 flex flex-wrap gap-4">
+    {
+      socialLinks.map((link) => (
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-neutral-400 transition-colors duration-300 hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+</section>

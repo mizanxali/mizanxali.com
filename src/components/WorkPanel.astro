@@ -1,0 +1,29 @@
+---
+interface Props {
+  /** Must match the id of the tab that controls this panel. */
+  id: string;
+  title: string;
+  description: string;
+  hidden?: boolean;
+}
+
+const { id, title, description, hidden = false } = Astro.props;
+---
+
+<section
+  id={`work-panel-${id}`}
+  class="work-panel"
+  role="tabpanel"
+  aria-labelledby={`work-tab-${id}`}
+  data-work-panel={id}
+  hidden={hidden}
+>
+  <div class="scroll-animate">
+    <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">{title}</h3>
+    <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
+      {description}
+    </p>
+  </div>
+
+  <slot />
+</section>
