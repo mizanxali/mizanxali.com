@@ -64,6 +64,55 @@ const huddle01Projects = [
 ];
 
 const personalProjects = [
+  {
+    name: "Floodlights",
+    description:
+      "Flighty for cricket - mobile app to log every match watched live in a stadium, with a growing world map, stats, and a friends feed",
+    image: "/floodlights.webp",
+    links: [{ label: "Live Site", url: "https://floodlights.mizanxali.com" }],
+    tech: ["React Native", "Expo", "Hono", "CF Workers", "Supabase", "Postgres", "Drizzle"],
+  },
+  {
+    name: "Heimdall",
+    description:
+      "Offline peer-to-peer friend finder - two phones swap GPS over Bluetooth and WiFi Direct, then a live compass points you at each other with no internet",
+    image: "/heimdall.webp",
+    links: [{ label: "GitHub", url: "https://github.com/mizanxali/heimdall" }],
+    tech: ["React Native", "Expo", "Bluetooth", "Zustand"],
+  },
+  {
+    name: "Kohli vs The Dollar",
+    description:
+      "Race to 100 between Virat Kohli's international centuries and the price of a US dollar in rupees, with a live public poll backed by a Durable Object",
+    image: "/kohli-vs-dollar.webp",
+    links: [
+      { label: "Live Site", url: "https://kohlivsthedollar.fun" },
+      { label: "GitHub", url: "https://github.com/mizanxali/kohli-vs-dollar" },
+    ],
+    tech: ["React", "Vite", "Tailwind", "CF Workers", "Durable Objects"],
+  },
+  {
+    name: "Shakespeare for Bharat",
+    description:
+      "Read every Shakespeare play, then translate or listen to any speech in 22 Indian languages",
+    image: "/shakespeare.webp",
+    links: [
+      { label: "Live Site", url: "https://shakespeare-for-bharat.vercel.app" },
+      { label: "GitHub", url: "https://github.com/mizanxali/shakespeare-for-bharat" },
+    ],
+    tech: ["Next.js", "Tailwind", "TypeScript", "Sarvam AI", "Vercel"],
+  },
+  {
+    name: "NBA Buddy",
+    description:
+      "AI companion app for NBA fans - ask anything about teams, players and stats, bookmark replies, and add upcoming games to your calendar",
+    image: "/nba-buddy.webp",
+    links: [
+      { label: "GitHub", url: "https://github.com/mizanxali/nba-buddy" },
+      { label: "YouTube", url: "https://www.youtube.com/shorts/8IzNrx66ejo" },
+    ],
+    tech: ["React Native", "Expo", "Gemini", "Hono", "CF Workers"],
+  },
    {
     name: "Visage",
     description:
@@ -98,14 +147,6 @@ const personalProjects = [
     image: "/pinitia.webp",
     links: [{ label: "GitHub", url: "https://github.com/mizanxali/pinitia" }],
     tech: ["Next.js", "Tailwind", "Postgres", "Google Maps", "Move", "Initia"],
-  },
-  {
-    name: "Find My Friend",
-    description:
-      "Offline peer-to-peer friend finder app",
-    image: "/find-my-friend.webp",
-    links: [{ label: "GitHub", url: "https://github.com/mizanxali/find-my-friend" }],
-    tech: ["React Native", "Expo", "Bluetooth", "Zustand"],
   },
   {
     name: "UNO Online",
@@ -253,6 +294,12 @@ const techMeta = {
   "npm": { slug: "npm" },
   "Move": { slug: "sui" },
   "WebRTC": { slug: "webrtc", color: "white" },
+  Supabase: { slug: "supabase" },
+  Gemini: { slug: "googlegemini" },
+  Vite: { slug: "vite" },
+  Vercel: { slug: "vercel", color: "white" },
+  "Durable Objects": { slug: "cloudflare" },
+  "Sarvam AI": { fallback: "SA" },
 };
 ---
 
@@ -623,7 +670,7 @@ const techMeta = {
                     Side Projects
                   </h3>
                   <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-neutral-400">
-                    Experiments across AI, developer tooling, prediction markets, desktop software, and games.
+                    Experiments across AI, consumer mobile apps, developer tooling, prediction markets, desktop software, and games.
                   </p>
                 </div>
 
