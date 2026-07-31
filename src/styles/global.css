@@ -1,26 +1,49 @@
 @import "tailwindcss";
+@import "./fonts.css";
+@import "./tokens.css";
 @import "./animations.css";
 @import "./components.css";
 
+/* Tailwind's stock palette and radius scale are cleared out: every color has
+   to come from a token (see tokens.css), and the idiom is sharp rectangles. */
 @theme {
-  --font-geist: "Geist", system-ui, -apple-system, sans-serif;
-  --color-neutral-950: #0a0a0a;
-  --color-neutral-900: #111111;
-  --color-neutral-800: #1a1a1a;
-  --color-neutral-700: #2a2a2a;
-  --color-neutral-600: #3a3a3a;
-  --color-neutral-500: #666666;
-  --color-neutral-400: #888888;
-  --color-neutral-300: #a0a0a0;
-  --color-neutral-200: #cccccc;
-  --color-neutral-100: #ededed;
-  --color-neutral-50: #fafafa;
+  --color-*: initial;
+  --radius-*: initial;
+
+  --font-mono: "Chivo Mono", ui-monospace, monospace;
+
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-ghost: var(--ink-ghost);
+  --color-rule: var(--rule);
+  --color-rule-2: var(--rule-2);
+  --color-accent: var(--accent);
+  --color-transparent: transparent;
+  --color-current: currentColor;
+}
+
+*,
+*::before,
+*::after {
+  border-color: var(--rule);
+  font-variant-ligatures: none;
+  font-feature-settings:
+    "liga" 0,
+    "clig" 0,
+    "calt" 0,
+    "dlig" 0;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 3.5rem;
-  background: #0a0a0a;
+  background: var(--bg);
+  color: var(--ink);
+  text-rendering: geometricPrecision;
 }
 
 body {

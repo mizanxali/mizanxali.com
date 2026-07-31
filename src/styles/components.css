@@ -1,74 +1,107 @@
-/* Hero */
+/* Type */
 
-.hero-highlight {
-  position: relative;
+/* Emphasis inside body copy: ink weight, no fills and no glows. Accent is
+   held back for the caret, hovers, and the card edge. */
+.em {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.caret {
   display: inline-block;
-  padding: 0 0.18em;
-  color: rgb(250 250 250);
-  isolation: isolate;
+  width: 3px;
+  height: 0.8em;
+  margin-left: 0.12em;
+  background: var(--accent);
+  vertical-align: baseline;
 }
 
-.hero-highlight::before {
-  content: "";
-  position: absolute;
-  inset: -0.1em -0.08em 0;
-  background: var(--highlight-fill);
-  clip-path: polygon(1% 18%, 99% 6%, 97% 92%, 4% 100%);
-  box-shadow:
-    0 0 0 1px var(--highlight-border),
-    0 0 24px var(--highlight-glow);
-  transform: rotate(-0.8deg);
-  transform-origin: center;
-  z-index: -1;
+/* Small uppercase label that opens a block — the eyebrow treatment. */
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-ghost);
 }
 
-.hero-highlight-frontend {
-  --highlight-fill: rgba(251, 146, 60, 0.22);
-  --highlight-border: rgba(251, 146, 60, 0.34);
-  --highlight-glow: rgba(251, 146, 60, 0.24);
+/* Buttons — 1px ink border, sharp corners, instant ink/background
+   inversion on hover. Never accent-filled. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.12s,
+    color 0.12s;
 }
 
-.hero-highlight-realtime {
-  --highlight-fill: rgba(56, 189, 248, 0.2);
-  --highlight-border: rgba(56, 189, 248, 0.32);
-  --highlight-glow: rgba(56, 189, 248, 0.22);
+.btn:hover {
+  background: var(--ink);
+  color: var(--bg);
 }
 
-.hero-highlight-onchain {
-  --highlight-fill: rgba(74, 222, 128, 0.2);
-  --highlight-border: rgba(74, 222, 128, 0.32);
-  --highlight-glow: rgba(74, 222, 128, 0.22);
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Inline text link */
+.link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition:
+    color 0.12s ease,
+    text-decoration-color 0.12s ease;
+}
+
+.link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 /* Work tabs */
 
 .work-tab {
-  border: 1px solid rgba(250, 250, 250, 0.08);
-  padding: 0.65rem 0.95rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  border: 1px solid var(--rule);
+  background: transparent;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgb(163 163 163);
+  color: var(--ink-faint);
+  cursor: pointer;
   transition:
-    border-color 0.25s ease,
-    background-color 0.25s ease,
-    color 0.25s ease;
+    border-color 0.12s,
+    background-color 0.12s,
+    color 0.12s;
 }
 
 .work-tab:hover {
-  border-color: rgba(250, 250, 250, 0.18);
-  color: rgb(245 245 245);
+  border-color: var(--ink);
+  color: var(--ink);
 }
 
 .work-tab[aria-selected="true"] {
-  border-color: rgba(250, 250, 250, 0.18);
-  background: rgba(250, 250, 250, 0.08);
-  color: rgb(250 250 250);
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
 }
 
 .work-tab:focus-visible {
-  outline: 2px solid rgba(250, 250, 250, 0.24);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -76,23 +109,104 @@
   display: none;
 }
 
-/* Desktop content pane */
+/* Structure is drawn: grids of cells sharing one 1px rule between them. */
 
-#content-pane {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(250, 250, 250, 0.14) transparent;
+.cell-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
 }
 
-#content-pane::-webkit-scrollbar {
+@media (min-width: 1280px) {
+  .cell-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
+}
+
+/* Hover lifts the cell onto the raised fill and marks it with a 2px accent
+   edge — the only place accent carries weight in a card. */
+.cell-interactive {
+  transition: background-color 0.12s;
+}
+
+.cell-interactive::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.12s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cell-interactive:hover {
+  background: var(--panel);
+}
+
+.cell-interactive:hover::before {
+  opacity: 1;
+}
+
+/* Tech badges — brand marks are masked to ink so the row stays monochrome. */
+
+.tech-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-color: var(--ink-faint);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.tech-fallback {
+  display: flex;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  font-size: 7px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--ink-ghost);
+}
+
+/* Desktop panes */
+
+#content-pane,
+aside {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-ghost) transparent;
+}
+
+#content-pane::-webkit-scrollbar,
+aside::-webkit-scrollbar {
   width: 10px;
 }
 
-#content-pane::-webkit-scrollbar-track {
+#content-pane::-webkit-scrollbar-track,
+aside::-webkit-scrollbar-track {
   background: transparent;
 }
 
-#content-pane::-webkit-scrollbar-thumb {
+#content-pane::-webkit-scrollbar-thumb,
+aside::-webkit-scrollbar-thumb {
   border: 3px solid transparent;
-  background: rgba(250, 250, 250, 0.14);
+  background: var(--ink-ghost);
   background-clip: content-box;
 }

@@ -54,3 +54,16 @@
     transition: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink,
+  .animate-fade-in {
+    animation: none;
+  }
+
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

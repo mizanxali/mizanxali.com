@@ -11,18 +11,15 @@ interface Props {
 const { item, index } = Astro.props;
 ---
 
-<div
-  class="scroll-animate overflow-hidden border border-white/8 bg-neutral-950/80"
-  style={`transition-delay: ${index * 50}ms`}
->
-  <div class="aspect-video border-b border-white/8">
+<div class="cell scroll-animate" style={`transition-delay: ${index * 50}ms`}>
+  <div class="aspect-video border-b border-rule bg-panel">
     {
       item.type === "blog" ? (
         <a
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="group block h-full w-full overflow-hidden bg-neutral-900"
+          class="group block h-full w-full overflow-hidden"
         >
           <img
             src={item.image}
@@ -36,16 +33,14 @@ const { item, index } = Astro.props;
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,#111111_0%,#171717_45%,#0a0a0a_100%)] px-8 text-center transition-colors duration-300 hover:bg-neutral-900"
+          class="flex h-full w-full items-center justify-center px-8 text-center transition-colors duration-100 hover:bg-paper-2"
         >
           <div class="flex flex-col items-center">
-            <div class="border border-white/12 p-5">
-              <PlaylistIcon class="h-10 w-10 text-neutral-200" />
+            <div class="border border-rule p-5">
+              <PlaylistIcon class="h-10 w-10 text-ink-faint" />
             </div>
-            <p class="mt-5 text-[10px] font-semibold uppercase tracking-[0.24em] text-neutral-500">
-              Playlist
-            </p>
-            <p class="mt-2 text-sm text-neutral-300">Open the full Huddle01 video library</p>
+            <p class="label mt-5">Playlist</p>
+            <p class="mt-2 text-[13px] text-ink-faint">Open the full Huddle01 video library</p>
           </div>
         </a>
       ) : (
@@ -60,8 +55,8 @@ const { item, index } = Astro.props;
       )
     }
   </div>
-  <div class="p-5">
-    <h4 class="text-base font-semibold text-neutral-100">{item.name}</h4>
-    <p class="mt-2 text-sm leading-relaxed text-neutral-500">{item.description}</p>
+  <div class="p-6">
+    <h4 class="text-[16px] font-semibold tracking-[-0.01em] text-ink">{item.name}</h4>
+    <p class="mt-2.5 max-w-[42ch] text-[13px] leading-[1.7] text-ink-faint">{item.description}</p>
   </div>
 </div>

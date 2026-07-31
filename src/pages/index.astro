@@ -10,7 +10,7 @@ import { huddle01Projects } from "../data/huddle01Projects";
 import { personalProjects } from "../data/personalProjects";
 import { site } from "../data/site";
 
-const gridClass = "mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2";
+const gridClass = "mt-8 cell-grid";
 ---
 
 <BaseLayout title={site.title} description={site.description}>
@@ -18,7 +18,10 @@ const gridClass = "mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2";
     <div class="lg:grid lg:h-screen lg:grid-cols-2">
       <Sidebar />
 
-      <main id="content-pane" class="px-6 py-8 lg:h-screen lg:overflow-y-auto lg:px-10 lg:py-10">
+      <main
+        id="content-pane"
+        class="px-6 pb-8 lg:h-screen lg:overflow-y-auto lg:px-10 lg:pb-10"
+      >
         <section id="work" class="scroll-mt-24">
           <div class="max-w-4xl">
             <WorkTabs />
@@ -51,13 +54,12 @@ const gridClass = "mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2";
                 }
               </div>
 
-              <p class="mt-5 text-sm font-light text-neutral-500 scroll-animate">
+              <p class="scroll-animate mt-6 text-[13px] leading-[1.7] text-ink-faint">
                 + more on <a
                   href={site.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-neutral-300 underline decoration-neutral-700 underline-offset-4 transition-all duration-300 hover:text-white hover:decoration-neutral-400"
-                  >GitHub</a
+                  class="link">GitHub</a
                 >
               </p>
             </WorkPanel>

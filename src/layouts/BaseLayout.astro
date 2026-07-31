@@ -9,23 +9,26 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/fonts/ChivoMono-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
     />
     <script defer src="https://assets.onedollarstats.com/stonks.js"></script>
   </head>
   <body
-    class="bg-neutral-950 text-neutral-50 font-geist antialiased selection:bg-white/20 lg:overflow-hidden"
+    class="bg-bg text-ink font-mono antialiased selection:bg-ink selection:text-bg lg:overflow-hidden"
   >
     <slot />
   </body>
