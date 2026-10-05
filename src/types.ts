@@ -13,6 +13,7 @@ export interface Project {
 
 export interface WorkExperience {
   company: string;
+  logo: string;
   role: string;
   period: string;
   description?: string;

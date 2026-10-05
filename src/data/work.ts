@@ -76,6 +76,7 @@ const huddle01Projects: Project[] = [
 export const work: WorkExperience[] = [
   {
     company: "Offline Protocol",
+    logo: "/offline-protocol-logo.webp",
     role: "Software Development Engineer",
     period: "Aug 2026 - Present",
     description: "Core maintainer of Fernweh, an offline-first messenger, and the open-source Offline Protocol SDK.",
@@ -104,6 +105,7 @@ export const work: WorkExperience[] = [
   },
   {
     company: "August AI",
+    logo: "/august-ai-logo.webp",
     role: "Software Development Engineer",
     period: "Jun 2026 - Aug 2026",
     description:
@@ -140,6 +142,7 @@ export const work: WorkExperience[] = [
   },
   {
     company: "Huddle01",
+    logo: "/huddle01-logo.webp",
     role: "Lead Product Engineer",
     period: "Jan 2023 - Mar 2026",
     description: "Built core products across web3 and webRTC tech stacks using TypeScript.",
