@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar.astro";
 import WorkPanel from "../components/WorkPanel.astro";
 import WorkTabs from "../components/WorkTabs.astro";
 import { contentItems } from "../data/content";
-import { huddle01Projects } from "../data/huddle01Projects";
+import { work } from "../data/work";
 import { personalProjects } from "../data/personalProjects";
 import { site } from "../data/site";
 
@@ -24,17 +24,28 @@ const gridClass = "mt-6 grid grid-cols-1 gap-6 xl:grid-cols-2";
             <WorkTabs />
 
             <WorkPanel
-              id="huddle01"
-              title="Things shipped at Huddle01"
-              description="Lead Product Engineer, Jan 2023 - Mar 2026. Built core products across web3 and webRTC tech stacks using TypeScript."
+              id="work"
+              title="Work"
+              description="Things I've shipped at the companies I've worked at."
             >
-              <div class={gridClass}>
-                {
-                  huddle01Projects.map((project, i) => (
-                    <ProjectCard project={project} index={i} />
-                  ))
-                }
-              </div>
+              {
+                work.map((job) => (
+                  <div class="mt-12 first:mt-8">
+                    <div class="scroll-animate">
+                      <h4 class="text-xl font-semibold tracking-tight">{job.company}</h4>
+                      <p class="mt-1 text-sm font-light text-neutral-400">
+                        {job.role}, {job.period}
+                        {job.description && <><br />{job.description}</>}
+                      </p>
+                    </div>
+                    <div class={gridClass}>
+                      {job.projects.map((project, i) => (
+                        <ProjectCard project={project} index={i} />
+                      ))}
+                    </div>
+                  </div>
+                ))
+              }
             </WorkPanel>
 
             <WorkPanel

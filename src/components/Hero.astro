@@ -8,13 +8,13 @@ import { site, socialLinks } from "../data/site";
       class="inline-block w-[3px] h-[0.85em] bg-neutral-50 ml-1 align-middle animate-blink"></span>
   </h1>
   <p class="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 font-light md:text-lg">
-    I am a fullstack product engineer, with a strong frontend focus.<br />
-    Over the last 4 years, I have worked at the intersection of
+    I am a fullstack product engineer, building consumer apps across web3 and AI.<br />
+    Over the last 5 years, I have worked at the intersection of
     <span class="hero-highlight hero-highlight-frontend">complex frontend engineering</span>,
-    <span class="hero-highlight hero-highlight-realtime">realtime systems</span>, and
-    <span class="hero-highlight hero-highlight-onchain">onchain interactions</span>.<br />I love
-    building consumer apps in the web3 space. I also enjoy writing developer documentation and
-    creating technical video content.
+    <span class="hero-highlight hero-highlight-realtime">realtime systems</span>,
+    <span class="hero-highlight hero-highlight-onchain">onchain interactions</span>,
+    <span class="hero-highlight hero-highlight-ai">AI products</span>, and
+    <span class="hero-highlight hero-highlight-offline">offline-first mesh networking</span>.<br />I also enjoy writing developer documentation and creating technical video content.
   </p>
   <div class="mt-8 flex flex-wrap items-center gap-3">
     <a
@@ -32,8 +32,13 @@ import { site, socialLinks } from "../data/site";
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-neutral-400 transition-colors duration-300 hover:text-white"
+          class="group inline-flex items-center gap-1.5 text-sm text-neutral-400 transition-colors duration-300 hover:text-white"
         >
+          <img
+            src={`https://api.iconify.design/simple-icons/${link.icon}.svg?color=white`}
+            alt=""
+            class="h-3.5 w-3.5 opacity-60 transition-opacity duration-300 group-hover:opacity-100"
+          />
           {link.label}
         </a>
       ))

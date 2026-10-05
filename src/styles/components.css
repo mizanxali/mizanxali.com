@@ -40,6 +40,18 @@
   --highlight-glow: rgba(74, 222, 128, 0.22);
 }
 
+.hero-highlight-ai {
+  --highlight-fill: rgba(167, 139, 250, 0.22);
+  --highlight-border: rgba(167, 139, 250, 0.34);
+  --highlight-glow: rgba(167, 139, 250, 0.24);
+}
+
+.hero-highlight-offline {
+  --highlight-fill: rgba(244, 114, 182, 0.2);
+  --highlight-border: rgba(244, 114, 182, 0.32);
+  --highlight-glow: rgba(244, 114, 182, 0.22);
+}
+
 /* Work tabs */
 
 .work-tab {

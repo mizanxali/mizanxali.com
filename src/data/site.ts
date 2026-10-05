@@ -3,20 +3,21 @@ import type { SocialLink, WorkTab } from "../types";
 export const site = {
   title: "Mizan Ali",
   description:
-    "Fullstack product engineer building at the intersection of complex frontend engineering and onchain realtime systems.",
+    "Fullstack product engineer building consumer apps across web3 and AI.",
   resumeUrl: "/resume.pdf",
   githubUrl: "https://github.com/mizanxali",
 };
 
 export const socialLinks: SocialLink[] = [
-  { label: "Twitter", url: "https://twitter.com/mizanxali" },
-  { label: "GitHub", url: "https://github.com/mizanxali" },
-  { label: "LinkedIn", url: "https://linkedin.com/in/mizanxali" },
-  { label: "Telegram", url: "https://t.me/mizanxali" },
+  { label: "Twitter", url: "https://twitter.com/mizanxali", icon: "x" },
+  { label: "GitHub", url: "https://github.com/mizanxali", icon: "github" },
+  { label: "LinkedIn", url: "https://linkedin.com/in/mizanxali", icon: "linkedin" },
+  { label: "Telegram", url: "https://t.me/mizanxali", icon: "telegram" },
+  { label: "Letterboxd", url: "https://letterboxd.com/mizanxali", icon: "letterboxd" },
 ];
 
 export const workTabs: WorkTab[] = [
-  { id: "huddle01", label: "Huddle01" },
+  { id: "work", label: "Work" },
   { id: "projects", label: "Projects" },
   { id: "content", label: "Content" },
 ];

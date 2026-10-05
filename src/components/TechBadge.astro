@@ -8,9 +8,11 @@ interface Props {
 const { tech } = Astro.props;
 
 const meta = techMeta[tech];
-const iconUrl = meta?.slug
-  ? `https://cdn.simpleicons.org/${meta.slug}${meta.color ? `/${meta.color}` : ""}`
-  : null;
+const iconUrl =
+  meta?.iconUrl ??
+  (meta?.slug
+    ? `https://cdn.simpleicons.org/${meta.slug}${meta.color ? `/${meta.color}` : ""}`
+    : null);
 ---
 
 <span

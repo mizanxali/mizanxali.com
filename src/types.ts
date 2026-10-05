@@ -11,6 +11,14 @@ export interface Project {
   tech: string[];
 }
 
+export interface WorkExperience {
+  company: string;
+  role: string;
+  period: string;
+  description?: string;
+  projects: Project[];
+}
+
 export interface ContentItem {
   type: "video" | "blog";
   name: string;
@@ -28,6 +36,8 @@ export interface ContentItem {
 export interface TechMeta {
   /** Simple Icons slug, resolved via cdn.simpleicons.org. */
   slug?: string;
+  /** Full icon URL, for icons Simple Icons doesn't have. */
+  iconUrl?: string;
   /** Icon colour override, for icons that are invisible on a dark background. */
   color?: string;
   /** Text shown when there is no icon, or the icon fails to load. */
@@ -37,6 +47,8 @@ export interface TechMeta {
 export interface SocialLink {
   label: string;
   url: string;
+  /** Simple Icons slug, resolved via Iconify. */
+  icon: string;
 }
 
 export interface WorkTab {
