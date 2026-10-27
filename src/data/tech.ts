@@ -52,4 +52,8 @@ export const techMeta: Record<string, TechMeta> = {
   Fasten: { fallback: "FA" },
   Twilio: { iconUrl: "https://api.iconify.design/simple-icons/twilio.svg?color=%23F22F46" },
   "Sarvam AI": { fallback: "SA" },
+  "Claude API": { slug: "claude" },
+  "Three.js": { slug: "threedotjs", color: "white" },
+  D1: { slug: "cloudflare" },
+  "Logistic Regression": { fallback: "LR" },
 };

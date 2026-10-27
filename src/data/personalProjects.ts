@@ -4,7 +4,7 @@ export const personalProjects: Project[] = [
   {
     name: "Floodlights",
     description:
-      "Flighty for cricket - mobile app to log every match watched live in a stadium, with a growing world map, stats, and a friends feed",
+      "Letterboxd for cricket - mobile app to log and rate every match you watch, at the ground or on TV, with a stadium map, stats, and a friends feed",
     image: "/floodlights.webp",
     links: [{ label: "Live Site", url: "https://floodlights.mizanxali.com" }, { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.mizanxali.floodlights" }],
     tech: ["React Native", "Expo", "Hono", "CF Workers", "Supabase", "Postgres", "Drizzle"],
@@ -19,6 +19,28 @@ export const personalProjects: Project[] = [
       { label: "GitHub", url: "https://github.com/mizanxali/visage" },
     ],
     tech: ["Electron", "Node.js", "RetinaFace", "ONNX", "Zustand", "SQLite"],
+  },
+  {
+    name: "Radius",
+    description:
+      "IRL networking app for web3 events - phones find each other over Bluetooth, AI ranks who's worth meeting, and proof-of-meet stamps mint onchain",
+    image: "/radius.webp",
+    links: [
+      { label: "Video", url: "https://x.com/mizanxali/status/2114665885315240449" },
+      { label: "GitHub", url: "https://github.com/mizanxali/radius" },
+    ],
+    tech: ["React Native", "Offline Protocol", "Bluetooth", "Claude API", "CF Workers", "Base"],
+  },
+  {
+    name: "Sex and the City",
+    description:
+      "Comedy dating sim grounded in real survey data - make a character, drop them into a town of 1,000 personas, and watch their month play out",
+    image: "/sex-and-the-city.webp",
+    links: [
+      { label: "Live Site", url: "https://sexandthecity.fun" },
+      { label: "GitHub", url: "https://github.com/mizanxali/sex-and-the-city" },
+    ],
+    tech: ["TypeScript", "Three.js", "Vite", "Logistic Regression", "Claude API", "CF Workers", "D1"],
   },
   {
     name: "Pit Stop",
