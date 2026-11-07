@@ -56,4 +56,7 @@ export const techMeta: Record<string, TechMeta> = {
   "Three.js": { slug: "threedotjs", color: "white" },
   D1: { slug: "cloudflare" },
   "Logistic Regression": { fallback: "LR" },
+  "0G": { fallback: "0G" },
+  "World ID": { fallback: "WD" },
+  ENS: { slug: "ens" },
 };

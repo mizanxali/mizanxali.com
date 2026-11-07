@@ -10,6 +10,18 @@ export const personalProjects: Project[] = [
     tech: ["React Native", "Expo", "Hono", "CF Workers", "Supabase", "Postgres", "Drizzle"],
   },
   {
+    name: "MeshRover",
+    description:
+      "Robots that never need the internet - rovers talk to their base over an encrypted offline mesh, get decisions from 0G, stop safely when it's out of reach, and ask a World ID-verified human before anything risky",
+    image: "/meshrover.webp",
+    links: [
+      { label: "Live Site", url: "https://meshrover.app" },
+      { label: "GitHub", url: "https://github.com/mizanxali/meshrover" },
+      { label: "ETHGlobal", url: "https://ethglobal.com/showcase/meshrover-h6hnt" },
+    ],
+    tech: ["Node.js", "Offline Protocol", "React Native", "0G", "World ID", "ENS"],
+  },
+  {
     name: "Visage",
     description:
       "Desktop app for finding photos of yourself from a large album using face recognition ML, fully offline",
