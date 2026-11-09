@@ -60,7 +60,7 @@ export const personalProjects: Project[] = [
       "No-limit Texas hold'em poker for the people in the room - browsers, iPhones and Android phones share one table over Bluetooth and local Wi-Fi, with no internet and no server",
     image: "/flush.webp",
     links: [
-      { label: "Live Site", url: "https://flush.mizanalip786.workers.dev" },
+      { label: "Live Site", url: "https://flush.mizanxali.workers.dev" },
       { label: "GitHub", url: "https://github.com/mizanxali/flush" },
     ],
     tech: ["React", "React Native", "Vite", "Offline Protocol", "Bluetooth", "WebRTC", "CF Workers"],
