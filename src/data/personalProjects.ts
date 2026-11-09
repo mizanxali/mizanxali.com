@@ -55,6 +55,17 @@ export const personalProjects: Project[] = [
     tech: ["TypeScript", "Three.js", "Vite", "Logistic Regression", "Claude API", "CF Workers", "D1"],
   },
   {
+    name: "Flush",
+    description:
+      "No-limit Texas hold'em poker for the people in the room - browsers, iPhones and Android phones share one table over Bluetooth and local Wi-Fi, with no internet and no server",
+    image: "/flush.webp",
+    links: [
+      { label: "Live Site", url: "https://flush.mizanalip786.workers.dev" },
+      { label: "GitHub", url: "https://github.com/mizanxali/flush" },
+    ],
+    tech: ["React", "React Native", "Vite", "Offline Protocol", "Bluetooth", "WebRTC", "CF Workers"],
+  },
+  {
     name: "Pit Stop",
     description:
       "Web3 Formula1 fantasy game - mint F1 cars as NFTs and compete by wagering them on real life races",
