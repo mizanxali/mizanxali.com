@@ -11,11 +11,8 @@ const createObserver = (): IntersectionObserver =>
         }
       });
     },
-    {
-      threshold: 0.12,
-      root: isDesktop() ? getContentPane() : null,
-      rootMargin: "0px 0px -80px 0px",
-    }
+    // Reveal on the first visible pixel, so a row peeking above the fold signals more to scroll.
+    { root: isDesktop() ? getContentPane() : null }
   );
 
 /** Elements inside a hidden tab panel are skipped until that panel is shown. */
